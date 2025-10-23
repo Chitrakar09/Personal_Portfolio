@@ -4,7 +4,7 @@ function ProfilePic({url="",
 
 {
   return (
-    <div id="profilePic" className={`${classname} bg-top bg-cover rounded-full shadow-[4px_4px_100px_10px_var(--colors-primary-royalBlue,#0A2540)]`}
+    <div id="profilePic" className={`${classname} bg-cover shadow-[4px_4px_100px_10px_var(--colors-primary-royalBlue,#0A2540)]`}
     style={{
         backgroundImage: `url(${url})`,
       }}

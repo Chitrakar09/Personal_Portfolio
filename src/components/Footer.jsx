@@ -9,9 +9,9 @@ function Footer() {
       </div>
       <div id="follow" className='flex flex-col md:flex-row md:justify-end md:items-end items-end justify-center w-full md:gap-2'>
         <span className='text-[0.625rem] md:text-sm lg:text-lg font-bold'>Follow</span>
-        <span className='text-[0.625rem] md:text-sm lg:text-lg hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out'><a href=''>Github</a></span>
-        <span className='text-[0.625rem] md:text-sm lg:text-lg hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out'><a href=''>Linkedin</a></span>
-        <span className='text-[0.625rem] md:text-sm lg:text-lg hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out'><a href=''>Instagram</a></span>
+        <span className='text-[0.625rem] md:text-sm lg:text-lg hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out'><a href='https://github.com/Chitrakar09' target='_blank'>Github</a></span>
+        <span className='text-[0.625rem] md:text-sm lg:text-lg hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out'><a href='https://www.linkedin.com/in/pratyush-chitrakar/' target='_blank'>Linkedin</a></span>
+        <span className='text-[0.625rem] md:text-sm lg:text-lg hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out'><a href='https://www.instagram.com/chitrakar_09/' target='_blank'>Instagram</a></span>
       </div>
     </div>
   )

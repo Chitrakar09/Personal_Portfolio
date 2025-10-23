@@ -27,7 +27,6 @@
   --breakpoint-xs: 320px;   /* Small phones (iPhone SE, small Androids) */
   --breakpoint-ms:375px;    /* medium phones*/
   --breakpoint-ls:425px;    /* large phones*/
-  --breakpoint-sm: 640px;   /* Regular phones */
   --breakpoint-md: 768px;   /* Tablets (portrait) */
   --breakpoint-lg: 1024px;  /* Tablets landscape / small laptops */
   --breakpoint-xl: 1280px;  /* Desktops */

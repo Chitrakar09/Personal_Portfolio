@@ -12,10 +12,10 @@ function Header() {
                 </div>
             </div>
 
-            <nav className='w-full text-text-muted text-[1rem] flex justify-between md:justify-end md:gap-10 items-center px-1'>
-                <NavLink className={({isActive})=>isActive?"text-text-light":null}>About</NavLink>
-                <NavLink className={({isActive})=>isActive?"text-text-light":null}>Projects</NavLink>
-                <NavLink className={({isActive})=>isActive?"text-text-light":null}>Contact</NavLink>
+            <nav className='w-full  text-[1rem] flex justify-between md:justify-end md:gap-10 items-center px-1'>
+                <NavLink to={'/realm/about'} className={({isActive})=>isActive?"text-text-light":'text-text-muted'}>About</NavLink>
+                <NavLink className={({isActive})=>isActive?"text-text-light":'text-text-muted'}>Projects</NavLink>
+                <NavLink className={({isActive})=>isActive?"text-text-light":'text-text-muted'}>Contact</NavLink>
             </nav>
         </div>
     )

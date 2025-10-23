@@ -1,3 +1,4 @@
 import LandingPage from "./LandingPage";
 import MainPage from "./MainPage";
-export{LandingPage,MainPage};
+import About from "./About";
+export{LandingPage,MainPage, About};
