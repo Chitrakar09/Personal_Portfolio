@@ -21,7 +21,7 @@
   /* 🌄 Gradients */
   --gradient-brand: linear-gradient(90deg, #FFD54A 0%, #0A2540 100%);
   --gradient-glow: linear-gradient(135deg, #00FFD1 0%, #FFD54A 100%);
-  --gradient-background: linear-gradient(180deg, #0A2540 60%, #000000 40%);
+  --gradient-background: linear-gradient(180deg, #0A2540 0%, #000000 100%);
 
   /* BreakPoints */
   --breakpoint-xs: 320px;   /* Small phones (iPhone SE, small Androids) */
