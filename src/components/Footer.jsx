@@ -2,7 +2,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div id="footer" className='w-full bg-background-dark rounded-[1.25rem] flex justify-between items-center text-text-light'>
+    <div id="footer" className='w-full rounded-[1.25rem] flex justify-between items-center text-text-light mb-2'>
       <div id="copyright" className='flex flex-col items-start justify-evenly w-full'>
         <span className='font-bold text-sm lg:text-lg'>Pratyush Chitrakar</span>
         <span className='text-[0.625rem] lg:text-[0.7rem] flex flex-wrap'>© 2025 • Designed & Developed by Pratyush Chitrakar</span>

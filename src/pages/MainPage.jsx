@@ -4,7 +4,7 @@ import { Outlet } from 'react-router'
 
 function MainPage() {
   return (
-    <div id='container' className='py-5 px-10 flex flex-col justify-between items-center min-h-full min-w-full'>
+    <div id='container' className='py-5 px-5 pb-0 md:px-10 flex flex-col justify-between items-center min-h-full min-w-full'>
       <Header />
       <Outlet />
       <Footer />
