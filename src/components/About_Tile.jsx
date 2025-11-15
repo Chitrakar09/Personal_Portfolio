@@ -1,6 +1,7 @@
 import React from "react";
 import ProfilePic from "./ProfilePic";
 import Button from "./Button";
+import { useNavigate } from "react-router";
 import {
   css,
   tailwind,
@@ -21,6 +22,13 @@ function About_Tile() {
     { icon: figma },
     { icon: git },
   ];
+  const navigate=useNavigate();
+  const downloadFile = (filePath, fileName) => {
+  const link = document.createElement("a");
+  link.href = filePath;
+  link.download = fileName;
+  link.click();
+};
   return (
     <div
       id="container"
@@ -75,15 +83,18 @@ function About_Tile() {
         >
           <Button
             text="View Projects"
-            className="py-2 px-3 md:py-4 md:px-5 md:text-2xl 3xl:py-10 3xl:px-12 3xl:text-5xl"
+            className="py-2 px-3 md:py-4 md:px-5 md:text-2xl 3xl:py-10 3xl:px-12 3xl:text-5xl animate-ease-linear hover:bg-linear-[135deg,#00FFD1_0%,#FFD54A_100%] hover:-translate-y-1 transition-transform delay-100 ease-linear"
+            onClick={()=>navigate("/realm/projects")}
           />
           <Button
-            className="py-2 px-3 md:py-4 md:px-5 md:text-2xl 3xl:py-10 3xl:px-12 3xl:text-5xl"
+            className="py-2 px-3 md:py-4 md:px-5 md:text-2xl 3xl:py-10 3xl:px-12 3xl:text-5xl animate-ease-linear hover:bg-accent-tealGlow hover:-translate-y-1 transition-transform delay-100 ease-linear"
             ring={true}
-            text="Download CV"
+            text="Download Resume"
             text_Color="text-text-light"
             background="bg-background-dark"
             shadow={false}
+            onClick={()=>downloadFile("/resume.pdf", "resume.pdf")}
+
           />
         </div>
       </div>

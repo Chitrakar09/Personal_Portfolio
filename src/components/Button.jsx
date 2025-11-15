@@ -1,5 +1,4 @@
 import React from "react";
-
 function Button({
   className = "",
   text = "View",
