@@ -1,10 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router";
 import { motion } from "motion/react";
-import { useMediaQuery } from "@mui/material";
 
 function Header() {
-    const isDesktop= useMediaQuery("(min-width:1024px)");
   return (
     <motion.div
       initial={{
@@ -56,7 +54,7 @@ function Header() {
           to={"/realm/about"}
           className={({ isActive }) =>
             `hover:-translate-y-1 transition-all duration-200 ${
-              isActive ? "text-text-light " : "text-text-light/30"
+              isActive ? "text-text-light underline underline-offset-8 -translate-y-1"  : "text-text-light/30"
             }`
           }
         >
@@ -66,7 +64,7 @@ function Header() {
           to={"/realm/projects"}
           className={({ isActive }) =>
             `hover:-translate-y-1 transition-all duration-200 ${
-              isActive ? "text-text-light" : "text-text-light/30"
+              isActive ? "text-text-light underline underline-offset-8 -translate-y-1" : "text-text-light/30"
             }`
           }
         >
@@ -76,7 +74,7 @@ function Header() {
           to={"/realm/contact"}
           className={({ isActive }) =>
             `hover:-translate-y-1 transition-all duration-200 ${
-              isActive ? "text-text-light" : "text-text-light/30"
+              isActive ? "text-text-light underline underline-offset-8 -translate-y-1" : "text-text-light/30"
             }`
           }
         >
