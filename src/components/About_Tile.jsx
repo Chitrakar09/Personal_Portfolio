@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react";
 import ProfilePic from "./ProfilePic";
 import Button from "./Button";
 import { useNavigate } from "react-router";
@@ -12,9 +11,8 @@ import {
   git,
   figma,
 } from "@/assets/icon_index";
-import { duration, useMediaQuery } from "@mui/material";
-import { useAnimate, motion, scale } from "motion/react";
-import { delay } from "motion";
+import { useMediaQuery } from "@mui/material";
+import { motion } from "motion/react";
 
 function About_Tile() {
   //icons
@@ -61,117 +59,117 @@ function About_Tile() {
           type: "spring",
           damping: 16,
           stiffness: 50,
-          mass:2
+          mass: 2,
         },
         scale: {
-         delay:1.9,
+          delay: 1.9,
           duration: 1.5,
-          ease:"easeInOut"
+          ease: "easeInOut",
         },
       },
     },
     hiddenDesktop: {
-      scale:0.05,
-      x:-10000
+      scale: 0.05,
+      x: -10000,
     },
-    visibleDesktop:{
-      x:0,
-      scale:1,
-      transition:{
-        x:{
+    visibleDesktop: {
+      x: 0,
+      scale: 1,
+      transition: {
+        x: {
           type: "spring",
           damping: 16,
           stiffness: 50,
-          mass:2
+          mass: 2,
         },
-        scale:{
-          delay:1.9,
+        scale: {
+          delay: 1.9,
           duration: 1.5,
-          ease:"easeInOut"
-        }
-      }
-    }
+          ease: "easeInOut",
+        },
+      },
+    },
   };
-  const headingVariants={
-    hidden:{
-      opacity:0,
-      x:-100
+  const headingVariants = {
+    hidden: {
+      opacity: 0,
+      x: -100,
     },
-    visible:{
-      opacity:1,
-      x:0,
-      transition:{
-        delay:3.5,
-        duration:1.2,
-        ease:"easeInOut"
-      }
-    }
-  }
-  const profileIdVariants={
-    hidden:{
-      opacity:0,
-      x:100,
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 3.5,
+        duration: 1.2,
+        ease: "easeInOut",
+      },
     },
-    visible:{
-      opacity:1,
-      x:0,
-      transition:{
-        delay:3.5,
-        duration:1.2,
-        ease:"easeInOut"
-      }
-    }
-  }
-  const profileParentVariants={
-    hidden:{
-      opacity:0,
+  };
+  const profileIdVariants = {
+    hidden: {
+      opacity: 0,
+      x: 100,
     },
-    visible:{
-      opacity:1,
-      transition:{
-        staggerChildren:0.5,
-        delayChildren:4.5
-      }
-    }
-  }
-  const profileChildVariants={
-    hidden:{
-      opacity:0,
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 3.5,
+        duration: 1.2,
+        ease: "easeInOut",
+      },
     },
-    visible:{
-      opacity:1,
-      transition:{
-        duration:1,
-        ease:"easeInOut"
-      }
-    }
-  }
-  const AboutParentVariants={
-    hidden:{
-      opacity:0,
+  };
+  const profileParentVariants = {
+    hidden: {
+      opacity: 0,
     },
-    visible:{
-      opacity:1,
-      transition:{
-        delayChildren:4.7,
-        staggerChildren:0.5
-      }
-    }
-  }
-  const AboutChildVariants={
-    hidden:{
-      opacity:0,
-      y:30,
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+        delayChildren: 4.5,
+      },
     },
-    visible:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1,
-        ease:"easeInOut"
-      }
-    }
-  }
+  };
+  const profileChildVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
+  const AboutParentVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: {
+        delayChildren: 4.7,
+        staggerChildren: 0.5,
+      },
+    },
+  };
+  const AboutChildVariants = {
+    hidden: {
+      opacity: 0,
+      y: 30,
+    },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
     // Main container
@@ -206,17 +204,24 @@ function About_Tile() {
           className="flex flex-col justify-center items-center gap-1"
         >
           {/* Name */}
-          <motion.span variants={profileIdVariants} className="text-text-light font-extrabold text-xl lg:text-3xl xl:text-5xl 2xl:text-[2.5rem] 3xl:text-7xl text-center">
+          <motion.span
+            variants={profileIdVariants}
+            className="text-text-light font-extrabold text-xl lg:text-3xl xl:text-5xl 2xl:text-[2.5rem] 3xl:text-7xl text-center"
+          >
             Pratyush Chitrakar
           </motion.span>
 
           {/* title */}
-          <motion.span variants={profileChildVariants} className="text-text-light/60 text-[0.8rem] ms:text-xs ls:text-[0.8rem] md:text-lg xl:text-2xl 2xl:text-xl 3xl:text-3xl text-center mb-1">
+          <motion.span
+            variants={profileChildVariants}
+            className="text-text-light/60 text-[0.8rem] ms:text-xs ls:text-[0.8rem] md:text-lg xl:text-2xl 2xl:text-xl 3xl:text-3xl text-center mb-1"
+          >
             Web Developer | UI/UX Enthusiast | CSIT Student
           </motion.span>
 
           {/* tech stack */}
-          <motion.div variants={profileChildVariants}
+          <motion.div
+            variants={profileChildVariants}
             id="tech_stack"
             className="w-full flex justify-center gap-3 items-center"
           >
@@ -234,9 +239,9 @@ function About_Tile() {
 
       {/* About container */}
       <motion.div
-      variants={AboutParentVariants}
-      initial="hidden"
-      animate="visible"
+        variants={AboutParentVariants}
+        initial="hidden"
+        animate="visible"
         id="about"
         className="w-full text-text-light flex flex-col justify-center items-center gap-3 lg:order-1"
       >
