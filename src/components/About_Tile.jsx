@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import ProfilePic from "./ProfilePic";
 import Button from "./Button";
 import { useNavigate } from "react-router";
@@ -13,6 +14,9 @@ import {
 } from "@/assets/icon_index";
 import { useMediaQuery } from "@mui/material";
 import { motion } from "motion/react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { isAnimated as checkForAnimated } from "@/features/checkAnimated/checkAnimatedSlice";
 
 function About_Tile() {
   //icons
@@ -41,11 +45,9 @@ function About_Tile() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   //Animation
-  const variants = {
-    hiddenGlobal: {
-      opacity: 0,
-    },
-  };
+  const hasAnimated=useSelector((state)=>state.checkForAnimated.hasAnimated)
+  const dispatch= useDispatch();
+  //Variants
   const avatarVariants = {
     hiddenMobile: {
       y: 1000,
@@ -173,20 +175,20 @@ function About_Tile() {
 
   return (
     // Main container
-    <motion.div
+    <div
       id="container"
       className="min-w-full min-h-full p-5 flex flex-col lg:flex-row justify-center items-center lg:items-start lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
-      <motion.div
+      <div
         id="profile"
         className="w-full flex flex-col justify-center items-center px-2.5 lg:pl-5 gap-1 rounded-2xl lg:order-2"
       >
         {/* Profile Pic */}
         <motion.div
           variants={avatarVariants}
-          initial={isDesktop ? "hiddenDesktop" : "hiddenMobile"}
-          animate={isDesktop ? "visibleDesktop" : "visibleMobile"}
+          initial={!hasAnimated&&(isDesktop ? "hiddenDesktop" : "hiddenMobile")}
+          animate={!hasAnimated&&(isDesktop ? "visibleDesktop" : "visibleMobile")}
           id="profilePic"
         >
           <ProfilePic
@@ -198,8 +200,8 @@ function About_Tile() {
         {/* Profile About */}
         <motion.div
           variants={profileParentVariants}
-          initial="hidden"
-          animate="visible"
+          initial={!hasAnimated&&("hidden")}
+          animate={!hasAnimated&&("visible")}
           id="profileAbout"
           className="flex flex-col justify-center items-center gap-1"
         >
@@ -235,21 +237,23 @@ function About_Tile() {
             ))}
           </motion.div>
         </motion.div>
-      </motion.div>
+      </div>
 
       {/* About container */}
       <motion.div
         variants={AboutParentVariants}
-        initial="hidden"
-        animate="visible"
+        initial={!hasAnimated&&("hidden")}
+          animate={!hasAnimated&&("visible")}
+          onAnimationComplete={() => dispatch(checkForAnimated())
+      }
         id="about"
         className="w-full text-text-light flex flex-col justify-center items-center gap-3 lg:order-1"
       >
         {/* heading */}
         <motion.h1
           variants={headingVariants}
-          initial="hidden"
-          animate="visible"
+           initial={!hasAnimated&&("hidden")}
+          animate={!hasAnimated&&("visible")}
           className="text-center font-bold text-[1.11rem] ms:text-[1.5rem] ls:text-2xl md:text-4xl lg:text-left lg:text-7xl lg:mb-2 xl:text-[7rem] 2xl:text-[5.5rem] 3xl:text-[11rem]"
         >
           Solving, creating, exploring with purpose.
@@ -294,7 +298,7 @@ function About_Tile() {
           />
         </motion.div>
       </motion.div>
-    </motion.div>
+    </div>
   );
 }
 

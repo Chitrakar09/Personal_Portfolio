@@ -4,6 +4,8 @@ import './index.css'
 import App from './App.jsx'
 import { LandingPage, MainPage, About,Projects, Contact } from './pages'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router'
+import { Provider } from 'react-redux'
+import { store } from './store/store'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -20,6 +22,8 @@ const router = createBrowserRouter(
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    <Provider store={store}>
     <RouterProvider router={router} />
+    </Provider>
   </StrictMode>,
 )
