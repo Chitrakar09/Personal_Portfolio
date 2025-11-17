@@ -27,7 +27,7 @@ function LandingPage() {
       opacity:1,
       transition:{
         delayChildren:1.5,
-        staggerChildren:0.6
+        staggerChildren:0.8
       }
     }
   }
@@ -61,7 +61,7 @@ function LandingPage() {
         id='info' className="text-text-light text-center flex flex-col items-center justify-center gap-1 ">
             <motion.p variants={infoChildVariants} id='intro' className='font-extrabold text-3xl ls:text-4xl md:text-5xl lg:text-6xl xl:text-7xl m-0'>Hi, I am <span className='bg-linear-[135deg,#00FFD1_0%,#FFD54A_100%] bg-clip-text text-transparent'>Pratyush</span></motion.p>
 
-            <motion.p variants={infoChildVariants} id='title' className='font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-muted m-0'>Web Developer | UI/UX Enthusiast | CSIT Student</motion.p>
+            <motion.p variants={infoChildVariants} id='title' className='font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light m-0'>Web Developer | UI/UX Enthusiast | CSIT Student</motion.p>
             <motion.div variants={infoChildVariants} id="button">
             <Link to="/realm/about"><Button text='Discover Me' className="p-4 text-lg md:text-2xl mt-5 hover:bg-linear-[135deg,#00FFD1_0%,#FFD54A_100%] hover:-translate-y-1 transition-transform delay-100 ease-linear"/></Link></motion.div>
         </motion.div>
