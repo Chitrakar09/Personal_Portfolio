@@ -11,9 +11,8 @@ function Footer() {
         opacity: 1,
         transition: {
           delay: 5.5,
-          type: "spring",
-          damping: 16,
-          stiffness: 120,
+          duration:1,
+          ease:"easeIn"
         },
       }}
       id="footer"

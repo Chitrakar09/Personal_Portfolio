@@ -1,6 +1,6 @@
 import React from "react";
-import ProfilePic from "./ProfilePic";
-import Button from "./Button";
+import ProfilePic from "../../ui/ProfilePic";
+import Button from "../../ui/Button";
 import { useNavigate } from "react-router";
 import {
   css,
@@ -177,12 +177,12 @@ function About_Tile() {
     // Main container
     <div
       id="container"
-      className="min-w-full min-h-full p-5 flex flex-col lg:flex-row justify-center items-center lg:items-start lg:gap-10 xl:gap-0"
+      className="min-w-full min-h-full py-5 flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
       <div
         id="profile"
-        className="w-full flex flex-col justify-center items-center px-2.5 lg:pl-5 gap-1 rounded-2xl lg:order-2"
+        className="w-full flex flex-col justify-center items-center px-2.5 lg:pl-5 rounded-2xl lg:order-2"
       >
         {/* Profile Pic */}
         <motion.div
@@ -190,10 +190,11 @@ function About_Tile() {
           initial={!hasAnimated&&(isDesktop ? "hiddenDesktop" : "hiddenMobile")}
           animate={!hasAnimated&&(isDesktop ? "visibleDesktop" : "visibleMobile")}
           id="profilePic"
+          className="fl"
         >
           <ProfilePic
             url="/profile.png"
-            classname="min-h-40 min-w-40 md:min-h-50 md:min-w-50 lg:min-h-90 lg:min-w-90 xl:min-w-115 xl:min-h-115 2xl:min-w-80 2xl:min-h-80 3xl:min-w-150 3xl:min-h-150 lg:mb-5 rounded-full bg-center md:shadow-[0_30px_131px_120px_rgba(255,213,74,0.56)] xl:shadow-[0_0_131px_150px_rgba(255,213,74,0.56)]"
+            classname="w-[35dvw] h-[35dvw] md:w-[25dvw] tablet:h-[25dvw] smLaptop:w-[30dvw] smLaptop:h-[30dvw] laptop:w-[20dvw] laptop:h-[20dvw] lgLaptop:w-[20dvw] lgLaptop:h-[20dvw] 4k:w-[23dvw] lg:mb-2 4k:h-[23dvw] rounded-full bg-center md:shadow-[0_30px_131px_120px_rgba(255,213,74,0.56)] xl:shadow-[0_0_131px_150px_rgba(255,213,74,0.56)]"
           />
         </motion.div>
 
@@ -208,7 +209,7 @@ function About_Tile() {
           {/* Name */}
           <motion.span
             variants={profileIdVariants}
-            className="text-text-light font-extrabold text-xl lg:text-3xl xl:text-5xl 2xl:text-[2.5rem] 3xl:text-7xl text-center"
+            className="text-text-light font-extrabold text-[6vw] tablet:text-[4vw] smLaptop:text-[3.2vw] laptop:text-[2.5vw] text-center"
           >
             Pratyush Chitrakar
           </motion.span>
@@ -216,7 +217,7 @@ function About_Tile() {
           {/* title */}
           <motion.span
             variants={profileChildVariants}
-            className="text-text-light/60 text-[0.8rem] ms:text-xs ls:text-[0.8rem] md:text-lg xl:text-2xl 2xl:text-xl 3xl:text-3xl text-center mb-1"
+            className="text-text-light/60 text-[3.1dvw] tablet:text-[2.3dvw] smLaptop:text-[1.7dvw] laptop:text-[1.1dvw] lgLaptop:text-[1.3dvw] text-center mb-2"
           >
             Web Developer | UI/UX Enthusiast | CSIT Student
           </motion.span>
@@ -232,7 +233,7 @@ function About_Tile() {
                 src={item.icon}
                 alt={`${item.icon}`}
                 key={`${item.icon}`}
-                className="w-3 ms:w-5 lg:w-8 3xl:w-12 h-auto"
+                className="w-[4.5dvw] tablet:w-[2.3dvw] smLaptop:w-[2.5dvw] laptop:w-[1.7dvw] lgLaptop:w-[1.5dvw] 4k:w-[1.7dvw]"
               />
             ))}
           </motion.div>
@@ -247,14 +248,14 @@ function About_Tile() {
           onAnimationComplete={() => dispatch(checkForAnimated())
       }
         id="about"
-        className="w-full text-text-light flex flex-col justify-center items-center gap-3 lg:order-1"
+        className="w-full text-text-light flex flex-col justify-center items-center gap-1 lg:order-1"
       >
         {/* heading */}
         <motion.h1
           variants={headingVariants}
            initial={!hasAnimated&&("hidden")}
           animate={!hasAnimated&&("visible")}
-          className="text-center font-bold text-[1.11rem] ms:text-[1.5rem] ls:text-2xl md:text-4xl lg:text-left lg:text-7xl lg:mb-2 xl:text-[7rem] 2xl:text-[5.5rem] 3xl:text-[11rem]"
+          className="text-center lg:text-left font-bold text-[5.8dvw] smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6.5dvw]/26 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10"
         >
           Solving, creating, exploring with purpose.
         </motion.h1>
@@ -263,13 +264,13 @@ function About_Tile() {
         <motion.div
           variants={AboutChildVariants}
           id="description"
-          className="flex flex-col gap-2"
+          className="flex flex-col gap-2 4k:mb-3"
         >
-          <p className="text-text-muted text-center 3xl:mb-3 text-[0.8rem] ms:text-sm md:text-xl lg:text-xl xl:text-2xl 2xl:text-xl 3xl:text-4xl lg:text-left">
+          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
             I’m a CSIT student and web developer passionate about building
             modern, responsive websites.{" "}
           </p>
-          <p className="text-text-muted text-center text-[0.8rem] ms:text-sm md:text-xl lg:text-xl xl:text-2xl 2xl:text-xl 3xl:text-4xl lg:text-left">
+          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
             Currently, I’m sharpening my skills in React, Tailwind, and
             problem-solving while working on personal projects to learn and
             grow.
@@ -284,11 +285,11 @@ function About_Tile() {
         >
           <Button
             text="View Projects"
-            className="py-2 px-3 md:py-4 md:px-5 md:text-2xl 3xl:py-10 3xl:px-12 3xl:text-5xl animate-ease-linear hover:bg-linear-[135deg,#00FFD1_0%,#FFD54A_100%] hover:-translate-y-1 transition-transform delay-100 ease-linear"
+            className="px-3 py-2 text-[3.7dvw] tablet:text-[2.5dvw] smLaptop:text-[2dvw] laptop:text-[1.4dvw] 4k:text-[1.9dvw] animate-ease-linear hover:bg-linear-[135deg,#00FFD1_0%,#FFD54A_100%] hover:-translate-y-1 transition-transform delay-100 ease-linear"
             onClick={() => navigate("/realm/projects")}
           />
           <Button
-            className="py-2 px-3 md:py-4 md:px-5 md:text-2xl 3xl:py-10 3xl:px-12 3xl:text-5xl animate-ease-linear hover:bg-accent-tealGlow hover:-translate-y-1 transition-transform delay-100 ease-linear"
+            className="px-3 py-2 text-[3.7dvw] tablet:text-[2.5dvw] smLaptop:text-[2dvw] laptop:text-[1.4dvw] 4k:text-[1.9dvw] animate-ease-linear hover:bg-accent-tealGlow hover:-translate-y-1 transition-transform delay-100 ease-linear"
             ring={true}
             text="Download Resume"
             text_Color="text-text-light"

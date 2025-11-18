@@ -22,17 +22,17 @@
   --gradient-glow: linear-gradient(135deg, #00ffd1 0%, #ffd54a 100%);
   --gradient-background: linear-gradient(180deg, #0a2540 0%, #000000 100%);
 
-  /* BreakPoints */
-  --breakpoint-xs: 320px; /* Small phones (iPhone SE, small Androids) */
-  --breakpoint-ms: 375px; /* medium phones*/
-  --breakpoint-ls: 425px; /* large phones*/
-  --breakpoint-md: 768px; /* Tablets (portrait) */
-  --breakpoint-lg: 1024px; /* Tablets landscape /small laptops */
-  --breakpoint-xl: 1280px; /* laptops */
-  --breakpoint-2xl: 1440px; /* Large laptops / Desktops */
-  --breakpoint-3xl: 2560px; /* 4K */
+  /* breakpoints */
+  --breakpoint-mobile:40rem;
+  --breakpoint-tablet:48rem;
+  --breakpoint-smLaptop:64rem;
+  --breakpoint-laptop:80rem;
+  --breakpoint-lgLaptop:96rem;
+  --breakpoint-4k:160rem
+  
 }
 
 body {
   font-family: "inter";
 }
+ 

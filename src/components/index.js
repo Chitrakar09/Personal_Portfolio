@@ -1,6 +1,6 @@
-import ProfilePic from "./ProfilePic";
-import Button from "./Button";
-import Header from "./Header";
-import Footer from "./Footer";
-import About_Tile from "./About_Tile";
+import ProfilePic from "./ui/ProfilePic";
+import Button from "./ui/Button";
+import Header from "./layout/Header";
+import Footer from "./layout/Footer";
+import About_Tile from "./features/About/About_Tile";
 export {ProfilePic,Button,Header,Footer,About_Tile};

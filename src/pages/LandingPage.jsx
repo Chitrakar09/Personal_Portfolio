@@ -1,5 +1,5 @@
 import React from "react";
-import ProfilePic from "../components/ProfilePic";
+import ProfilePic from "../components/ui/ProfilePic";
 import { Button } from "../components";
 import { Link } from "react-router";
 import { motion } from "motion/react";
