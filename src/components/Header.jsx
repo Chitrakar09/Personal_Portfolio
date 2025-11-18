@@ -18,7 +18,7 @@ function Header() {
         },
       }}
       id="header"
-      className="min-w-full flex flex-col md:flex-row justify-center md:justify-center items-center gap-5 sticky"
+      className="min-w-full flex flex-col md:flex-row justify-center md:justify-center items-center gap-5"
     >
       <div
         id="intro"

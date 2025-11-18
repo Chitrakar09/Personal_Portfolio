@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import ProfilePic from "./ProfilePic";
 import Button from "./Button";
 import { useNavigate } from "react-router";
@@ -19,6 +18,7 @@ import { useSelector } from "react-redux";
 import { isAnimated as checkForAnimated } from "@/features/checkAnimated/checkAnimatedSlice";
 
 function About_Tile() {
+  console.log(window.innerWidth)
   //icons
   const icons = [
     { icon: react },

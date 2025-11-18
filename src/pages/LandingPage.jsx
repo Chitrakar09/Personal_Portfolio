@@ -25,8 +25,8 @@ function LandingPage() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 1.5,
-        staggerChildren: 0.8,
+        delayChildren: 0.6,
+        staggerChildren: 0.6,
       },
     },
   };
