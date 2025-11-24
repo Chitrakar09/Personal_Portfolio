@@ -1,11 +1,16 @@
 import React from 'react'
-import { About_Tile } from '@/components'
+import { AboutSection, Career } from '@/components'
+import { useSelector } from 'react-redux'
 
 function About() {
+  const hasAnimated=useSelector((state)=>state.checkForAnimated.hasAnimated);
   return (
-    <div className='min-w-full min-h-full flex flex-col justify-center items-center gap-100'>
-      <About_Tile />
-    </div>
+    <div 
+
+    id='aboutPage' className='w-full h-full flex flex-col'>
+      <AboutSection/>  
+      {hasAnimated&&<Career/>}
+      </div>
   )
 }
 

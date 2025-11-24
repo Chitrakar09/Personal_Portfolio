@@ -2,34 +2,18 @@ import React from "react";
 import ProfilePic from "../../ui/ProfilePic";
 import Button from "../../ui/Button";
 import { useNavigate } from "react-router";
-import {
-  css,
-  tailwind,
-  html,
-  react,
-  javascript,
-  git,
-  figma,
-} from "@/assets/icon_index";
 import { useMediaQuery } from "@mui/material";
 import { motion } from "motion/react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { isAnimated as checkForAnimated } from "@/features/checkAnimated/checkAnimatedSlice";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook } from "@fortawesome/free-brands-svg-icons";
+import { faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 
-function About_Tile() {
-  console.log(window.innerWidth)
-  //icons
-  const icons = [
-    { icon: react },
-    { icon: javascript },
-    { icon: tailwind },
-    { icon: html },
-    { icon: css },
-    { icon: figma },
-    { icon: git },
-  ];
-
+function AboutSection() {
   //useNavigate
   const navigate = useNavigate();
 
@@ -45,31 +29,12 @@ function About_Tile() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
 
   //Animation
-  const hasAnimated=useSelector((state)=>state.checkForAnimated.hasAnimated)
-  const dispatch= useDispatch();
+  const hasAnimated = useSelector(
+    (state) => state.checkForAnimated.hasAnimated
+  );
+  const dispatch = useDispatch();
   //Variants
   const avatarVariants = {
-    hiddenMobile: {
-      y: 1000,
-      scale: 0.05,
-    },
-    visibleMobile: {
-      y: 0,
-      scale: 1,
-      transition: {
-        y: {
-          type: "spring",
-          damping: 16,
-          stiffness: 50,
-          mass: 2,
-        },
-        scale: {
-          delay: 1.9,
-          duration: 1.5,
-          ease: "easeInOut",
-        },
-      },
-    },
     hiddenDesktop: {
       scale: 0.05,
       x: -10000,
@@ -95,14 +60,16 @@ function About_Tile() {
   const headingVariants = {
     hidden: {
       opacity: 0,
-      x: -100,
+      x: isDesktop ? -100 : 0,
+      y: isDesktop ? 0 : 30,
     },
     visible: {
       opacity: 1,
       x: 0,
+      y: 0,
       transition: {
-        delay: 3.5,
-        duration: 1.2,
+        delay: isDesktop ? 3.5 : 0,
+        duration: isDesktop ? 1.2 : 2,
         ease: "easeInOut",
       },
     },
@@ -153,7 +120,7 @@ function About_Tile() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 4.7,
+        delayChildren: isDesktop ? 4.7 : 2,
         staggerChildren: 0.5,
       },
     },
@@ -176,40 +143,39 @@ function About_Tile() {
   return (
     // Main container
     <div
-      id="container"
-      className="min-w-full min-h-full py-5 flex flex-col lg:flex-row justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
+      id="AboutContainer"
+      className="w-full h-full px-5 md:px-10 pt-8 tablet:pt-[8vh] smLaptop:pt-[12vh] pb-[10vh] smLaptop:pb-[20vh] laptop:pb-[20vh] lgLaptop:pb-[15vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
       <div
         id="profile"
-        className="w-full flex flex-col justify-center items-center px-2.5 lg:pl-5 rounded-2xl lg:order-2"
+        className="w-full hidden smLaptop:flex flex-col justify-center items-center px-2.5 lg:pl-5 rounded-2xl lg:order-2"
       >
         {/* Profile Pic */}
         <motion.div
           variants={avatarVariants}
-          initial={!hasAnimated&&(isDesktop ? "hiddenDesktop" : "hiddenMobile")}
-          animate={!hasAnimated&&(isDesktop ? "visibleDesktop" : "visibleMobile")}
+          initial={!hasAnimated && "hiddenDesktop"}
+          animate={!hasAnimated && "visibleDesktop"}
           id="profilePic"
-          className="fl"
         >
           <ProfilePic
             url="/profile.png"
-            classname="w-[35dvw] h-[35dvw] md:w-[25dvw] tablet:h-[25dvw] smLaptop:w-[30dvw] smLaptop:h-[30dvw] laptop:w-[20dvw] laptop:h-[20dvw] lgLaptop:w-[20dvw] lgLaptop:h-[20dvw] 4k:w-[23dvw] lg:mb-2 4k:h-[23dvw] rounded-full bg-center md:shadow-[0_30px_131px_120px_rgba(255,213,74,0.56)] xl:shadow-[0_0_131px_150px_rgba(255,213,74,0.56)]"
+            classname="smLaptop:w-[30dvw] smLaptop:h-[30dvw] laptop:w-[20dvw] laptop:h-[20dvw] lgLaptop:w-[20dvw] lgLaptop:h-[20dvw] 4k:w-[23dvw] lg:mb-2 4k:h-[23dvw] rounded-full bg-[rgba(255,213,74,0.52)] bg-center smLaptop:shadow-[0_0_131px_120px_rgba(255,213,74,0.56)]"
           />
         </motion.div>
 
         {/* Profile About */}
         <motion.div
           variants={profileParentVariants}
-          initial={!hasAnimated&&("hidden")}
-          animate={!hasAnimated&&("visible")}
+          initial={!hasAnimated && "hidden"}
+          animate={!hasAnimated && "visible"}
           id="profileAbout"
           className="flex flex-col justify-center items-center gap-1"
         >
           {/* Name */}
           <motion.span
             variants={profileIdVariants}
-            className="text-text-light font-extrabold text-[6vw] tablet:text-[4vw] smLaptop:text-[3.2vw] laptop:text-[2.5vw] text-center"
+            className="text-text-light font-extrabold smLaptop:text-[3.2vw] laptop:text-[2.5vw] text-center"
           >
             Pratyush Chitrakar
           </motion.span>
@@ -217,7 +183,7 @@ function About_Tile() {
           {/* title */}
           <motion.span
             variants={profileChildVariants}
-            className="text-text-light/60 text-[3.1dvw] tablet:text-[2.3dvw] smLaptop:text-[1.7dvw] laptop:text-[1.1dvw] lgLaptop:text-[1.3dvw] text-center mb-2"
+            className="text-text-light/60 smLaptop:text-[1.7dvw] laptop:text-[1.1dvw] lgLaptop:text-[1.3dvw] text-center mb-2"
           >
             Web Developer | UI/UX Enthusiast | CSIT Student
           </motion.span>
@@ -226,16 +192,35 @@ function About_Tile() {
           <motion.div
             variants={profileChildVariants}
             id="tech_stack"
-            className="w-full flex justify-center gap-3 items-center"
+            className="w-full flex justify-center gap-3 items-center text-amber-50"
           >
-            {icons.map((item) => (
-              <img
-                src={item.icon}
-                alt={`${item.icon}`}
-                key={`${item.icon}`}
-                className="w-[4.5dvw] tablet:w-[2.3dvw] smLaptop:w-[2.5dvw] laptop:w-[1.7dvw] lgLaptop:w-[1.5dvw] 4k:w-[1.7dvw]"
+            <a href="https://github.com/Chitrakar09" target="_blank">
+              <FontAwesomeIcon
+                icon={faGithub}
+                className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
               />
-            ))}
+            </a>
+            <a href="https://www.instagram.com/chitrakar_09/" target="_blank">
+              <FontAwesomeIcon
+                icon={faInstagram}
+                className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
+              />
+            </a>
+            <a href="https://www.facebook.com/chitrakar09/" target="_blank">
+              <FontAwesomeIcon
+                icon={faFacebook}
+                className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/pratyush-chitrakar/"
+              target="_blank"
+            >
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
+              />
+            </a>
           </motion.div>
         </motion.div>
       </div>
@@ -243,19 +228,18 @@ function About_Tile() {
       {/* About container */}
       <motion.div
         variants={AboutParentVariants}
-        initial={!hasAnimated&&("hidden")}
-          animate={!hasAnimated&&("visible")}
-          onAnimationComplete={() => dispatch(checkForAnimated())
-      }
+        initial={!hasAnimated && "hidden"}
+        animate={!hasAnimated && "visible"}
+        onAnimationComplete={() => dispatch(checkForAnimated())}
         id="about"
         className="w-full text-text-light flex flex-col justify-center items-center gap-1 lg:order-1"
       >
         {/* heading */}
         <motion.h1
           variants={headingVariants}
-           initial={!hasAnimated&&("hidden")}
-          animate={!hasAnimated&&("visible")}
-          className="text-center lg:text-left font-bold text-[5.8dvw] smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6.5dvw]/26 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10"
+          initial={!hasAnimated && "hidden"}
+          animate={!hasAnimated && "visible"}
+          className="text-left lg:text-left font-bold text-[8vh]/20 tablet:text-[13vh]/34 smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6.5dvw]/26 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10 mb-3 tablet:mb-8"
         >
           Solving, creating, exploring with purpose.
         </motion.h1>
@@ -266,11 +250,11 @@ function About_Tile() {
           id="description"
           className="flex flex-col gap-2 4k:mb-3"
         >
-          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
+          <p className="text-text-muted text-left text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
             I’m a CSIT student and web developer passionate about building
             modern, responsive websites.{" "}
           </p>
-          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
+          <p className="text-text-muted text-left text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
             Currently, I’m sharpening my skills in React, Tailwind, and
             problem-solving while working on personal projects to learn and
             grow.
@@ -281,7 +265,7 @@ function About_Tile() {
         <motion.div
           variants={AboutChildVariants}
           id="buttons"
-          className="w-full mt-5 3xl:mt-10 flex justify-center lg:justify-start items-center gap-5"
+          className="w-full mt-5 3xl:mt-10 flex justify-start items-center gap-5"
         >
           <Button
             text="View Projects"
@@ -303,4 +287,4 @@ function About_Tile() {
   );
 }
 
-export default About_Tile;
+export default AboutSection;

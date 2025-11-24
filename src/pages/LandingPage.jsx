@@ -47,7 +47,7 @@ function LandingPage() {
   return (
     <div
       id="container"
-      className="max-h-full max-w-full min-h-full min-w-full flex justify-center items-center gap-10 lg:gap-35 px-10 flex-col lg:flex-row"
+      className="w-full h-full flex justify-center items-center gap-10 lg:gap-35 px-10 flex-col lg:flex-row"
     >
       <motion.div
         id="avatar"
@@ -57,7 +57,7 @@ function LandingPage() {
       >
         <ProfilePic
           url="/profile_Landing.jpg"
-          classname="min-w-52 min-h-52 lg:w-70 lg:h-70 rounded-full bg-top"
+          classname="min-w-52 min-h-52 lg:w-70 lg:h-70 rounded-full bg-top shadow-[0_0_131px_100px_rgba(255,213,74,0.56)]"
         />
       </motion.div>
       <motion.div

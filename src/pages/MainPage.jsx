@@ -1,13 +1,15 @@
 import React from 'react'
 import { Footer, Header } from '@/components'
 import { Outlet } from 'react-router'
+import { useSelector } from 'react-redux';
 
 function MainPage() {
+  const hasAnimated=useSelector((state)=>state.checkForAnimated.hasAnimated);
   return (
-    <div id='container' className='py-5 px-5 pb-0 md:px-10 flex flex-col justify-between items-center min-h-full min-w-full'>
+    <div id='mainContainer' className='w-full flex flex-col justify-between items-center'>
       <Header />
       <Outlet />
-      <Footer />
+      {hasAnimated&& <Footer />}
     </div>
 
   )

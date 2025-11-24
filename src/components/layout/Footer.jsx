@@ -1,47 +1,37 @@
 import React from "react";
-import { motion } from "motion/react";
-
+import { useMediaQuery } from "@mui/material";
 function Footer() {
+  const isDesktop = useMediaQuery("(min-width:1024px)");
   return (
-    <motion.div
-      initial={{
-        opacity: 0,
-      }}
-      animate={{
-        opacity: 1,
-        transition: {
-          delay: 5.5,
-          duration:1,
-          ease:"easeIn"
-        },
-      }}
+    <div
       id="footer"
-      className="w-full rounded-[1.25rem] flex justify-between items-center text-text-light mb-2"
+      className="w-full rounded-t-[1.25rem] py-2 px-5 md:px-10 mt-5 flex justify-between items-center bg-background-dark border-t-4 border-amber-50 text-amber-50"
     >
       <div
         id="copyright"
-        className="flex flex-col items-start justify-evenly w-full"
+        className="flex flex-col items-start justify-center w-full"
       >
-        <span className="font-bold text-sm lg:text-lg 3xl:text-3xl">
+        <span className="font-[1000] text-[4.9vw] md:text-[3vw] laptop:text-[1.3vw]/6">
           Pratyush Chitrakar
         </span>
-        <span className="text-[0.625rem] lg:text-[0.7rem] flex flex-wrap 3xl:text-lg">
+        <span className="text-[3vw] md:text-[1.5vw] laptop:text-[0.8vw] font-bold flex flex-wrap">
           © 2025 • Designed & Developed by Pratyush Chitrakar
         </span>
       </div>
       <div
         id="follow"
-        className="flex flex-col md:flex-row md:justify-end md:items-end items-end justify-center w-full md:gap-2"
+        className="hidden md:flex justify-end items-center w-full gap-2"
       >
-        <span className="text-[0.625rem] md:text-sm lg:text-lg 3xl:text-2xl font-bold">
+        <span className="text-[2.5vw] laptop:text-[1.3vw] font-bold">
           Follow
         </span>
-        <span className="text-[0.625rem] md:text-sm lg:text-lg 3xl:text-2xl hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out">
+        <div className="flex gap-2">
+        <span className="text-[2.5vw] laptop:text-[1.3vw] hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out">
           <a href="https://github.com/Chitrakar09" target="_blank">
             Github
           </a>
         </span>
-        <span className="text-[0.625rem] md:text-sm lg:text-lg 3xl:text-2xl hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out">
+        <span className="text-[2.5vw] laptop:text-[1.3vw] hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out">
           <a
             href="https://www.linkedin.com/in/pratyush-chitrakar/"
             target="_blank"
@@ -49,13 +39,14 @@ function Footer() {
             Linkedin
           </a>
         </span>
-        <span className="text-[0.625rem] md:text-sm lg:text-lg 3xl:text-2xl hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out">
+        <span className="text-[2.5vw] laptop:text-[1.3vw] hover:text-accent-amber hover:-translate-y-0.5 transition ease-in-out">
           <a href="https://www.instagram.com/chitrakar_09/" target="_blank">
             Instagram
           </a>
         </span>
+        </div>
       </div>
-    </motion.div>
+    </div>
   );
 }
 

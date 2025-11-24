@@ -1,4 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=DM+Serif+Text:ital@0;1&display=swap');
 @import "tailwindcss";
+@import 'tailwind-scrollbar-hide/v4';
 
 @theme {
   /* 🎨 Primary Colors */
@@ -28,11 +30,17 @@
   --breakpoint-smLaptop:64rem;
   --breakpoint-laptop:80rem;
   --breakpoint-lgLaptop:96rem;
-  --breakpoint-4k:160rem
+  --breakpoint-4k:160rem;
+
+  --font-heading: "Audiowide", sans-serif;
+  --font-title: "DM Serif Text", serif;
   
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "inter";
 }
- 
