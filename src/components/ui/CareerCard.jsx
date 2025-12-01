@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import { motion } from "motion/react";
 
 function CareerCard({
@@ -9,14 +8,11 @@ function CareerCard({
   date = "",
   details = "",
   tech = [],
-  borderColor = "primary-golden",
 }) {
   //initial values
   const border =
     use === "experience"
-      ? val % 2 === 0
-        ? `border-b-4 border-t-4 border-l-8`
-        : `border-t-4 border-b-4 border-r-8`
+      ? 'border-l-8'
       : "border-b-4";
 
   //animation
@@ -48,9 +44,7 @@ function CareerCard({
           transition: { duration: 0.3, ease: "easeInOut" },
         }
       }
-      className={` w-full p-3 lgLaptop:px-8 lgLaptop:pb-8 ${border} ${
-        use === "experience" ? "rounded-xl" : null
-      } flex flex-col gap-2 bg-background-dark text-start`}
+      className={` w-full p-3 lgLaptop:px-8 lgLaptop:pb-8 ${border} flex flex-col gap-2 bg-background-dark text-start`}
     >
       <div id="title">
         <h1 className="font-[1000] text-[7vw] tablet:text-[6vw] smLaptop:text-[5.5vw] laptop:text-[3vw] 4k:text-[3.5vw] laptop:underline-offset-8 font-title underline underline-offset-3">
@@ -78,7 +72,7 @@ function CareerCard({
               <button
                 key={i}
                 id="bubble"
-                className={`p-3 border-2 rounded-lg font-bold tablet:text-xl smLaptop:text-2xl laptop:text-lg lgLaptop:text-2xl lgLaptop:p-3 4k:text-[1.6vw] bg-primary-golden text-background-dark hover:bg-accent-tealGlow hover:text-amber-50 hover:scale-110 transition-all duration-500 ease-in-out`}
+                className={`py-0.5 px-1.5 rounded-md font-bold tablet:text-xl smLaptop:text-2xl laptop:text-base lgLaptop:text-xl 4k:text-[1.6vw] bg-primary-golden text-background-dark`}
               >
                 {tools}
               </button>

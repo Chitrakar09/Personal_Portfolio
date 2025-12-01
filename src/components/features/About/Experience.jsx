@@ -9,8 +9,7 @@ function Experience() {
       title: "Currently in Builder Phase",
       date: "2023-Present",
       details:
-        "Learning, experimenting, and building things that make me better at what I do. From small UI ideas to full web apps like OpenJournal, this phase is all about turning curiosity into code and progress into projects.",
-      tech: ["React", "Javascript", "Tailwind", "Html", "Css","Figma","Git","Framer Motion"],
+        "Learning, experimenting, and building things. Currently turning curiosity into code and progress into projects.",
     },
   ];
 

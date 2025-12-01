@@ -60,7 +60,7 @@ function AboutSection() {
       y: 0,
       transition: {
         delay: 0,
-        duration: isDesktop?2:2,
+        duration: isDesktop?2:1,
         ease: "easeInOut",
       },
     },
@@ -111,7 +111,7 @@ function AboutSection() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 2,
+        delayChildren: isDesktop?2:1,
         staggerChildren: 0.5,
       },
     },
@@ -135,7 +135,7 @@ function AboutSection() {
     // Main container
     <div
       id="AboutContainer"
-      className="w-full h-full px-5 md:px-10 pt-[7vh] smLaptop:pt-[12vh] pb-[10vh] smLaptop:pb-[20vh] laptop:pb-[20vh] lgLaptop:pb-[15vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
+      className="w-full h-full px-5 md:px-10 pt-[7vh] smLaptop:pt-[10vh] pb-[14vh] tablet:pb-[10vh] smLaptop:pb-[20vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
       <div
@@ -161,7 +161,7 @@ function AboutSection() {
           initial={!hasAnimated && "hidden"}
           animate={!hasAnimated && "visible"}
           id="profileAbout"
-          className="flex flex-col justify-center items-center gap-1"
+          className="flex flex-col justify-center items-center"
         >
           {/* Name */}
           <motion.span
@@ -174,9 +174,8 @@ function AboutSection() {
           {/* title */}
           <motion.span
             variants={profileChildVariants}
-            className="text-text-light/60 smLaptop:text-[1.7dvw] laptop:text-[1.1dvw] lgLaptop:text-[1.3dvw] text-center mb-2"
-          >
-            Web Developer | UI/UX Enthusiast | CSIT Student
+            className="text-text-light/60 smLaptop:text-[2dvw] laptop:text-[1.5dvw] lgLaptop:text-[1.5dvw] text-center mb-2"
+          >chitrakarpratyush@gmail.com
           </motion.span>
 
           {/* tech stack */}
@@ -231,7 +230,7 @@ function AboutSection() {
           variants={headingVariants}
           initial={!hasAnimated && "hidden"}
           animate={!hasAnimated && "visible"}
-          className="text-center lg:text-left font-bold text-[8vh]/20 tablet:text-[13vh]/34 smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6.5dvw]/26 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10 mb-3 tablet:mb-8"
+          className="text-center lg:text-left font-bold text-[8vh]/15 tablet:text-[13vh]/34 smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6dvw]/18 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10 mb-3 tablet:mb-8"
         >
           Solving, creating, exploring with purpose.
         </motion.h1>
@@ -242,11 +241,11 @@ function AboutSection() {
           id="description"
           className="flex flex-col gap-2 4k:mb-3"
         >
-          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
+          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.1dvw] 4k:text-[1.3dvw] lg:text-left">
             I’m a CSIT student and web developer passionate about building
             modern, responsive websites.{" "}
           </p>
-          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
+          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.1dvw] 4k:text-[1.3dvw] lg:text-left">
             Currently, I’m sharpening my skills in Frontend frameworks such as React, Tailwind, and also
             problem-solving while working on personal projects to learn and
             grow.

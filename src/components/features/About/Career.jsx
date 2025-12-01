@@ -26,7 +26,7 @@ function Career() {
   return (
     <div
       id="careerContainer"
-      className="w-full flex flex-col justify-evenly items-start gap-5 mb-10"
+      className="w-full flex flex-col justify-evenly items-center smLaptop:items-start gap-5 mb-10"
     >
       <motion.div
       variants={tabVariants}

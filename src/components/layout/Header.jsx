@@ -14,7 +14,7 @@ function Header() {
       animate={location.pathname==="/realm/about"&&{
         y: 0,
         transition: {
-          delay: isDesktop?2.65:2.6,
+          delay: isDesktop?2.65:1.5,
           type: "spring",
           damping: isDesktop?20:18,
           stiffness: 100,
@@ -77,7 +77,7 @@ function Header() {
         >
           Projects
         </NavLink>
-        <NavLink
+        {!isDesktop&&<NavLink
           to={"/realm/contact"}
           className={({ isActive }) =>
             `hover:-translate-y-1 transition-all duration-200 ${
@@ -88,7 +88,7 @@ function Header() {
           }
         >
           Contact
-        </NavLink>
+        </NavLink>}
       </nav>
     </motion.div>
   );
