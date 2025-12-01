@@ -53,25 +53,7 @@ function Experience() {
       viewport={{ once: false }}
       className="w-full bg-background-dark text-white px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
     >
-      <div id="headingContainer" className="w-full flex flex-col items-center">
-        <motion.h1
-          variants={childVariants}
-          id="heading"
-          className="w-fit text-[13vw] tablet:text-[10vw] smLaptop:text-[6vw] laptop:text-[4vw] font-heading font-[1000] underline underline-offset-4 hover:text-primary-golden"
-        >
-          Experience
-        </motion.h1>
-      </div>
-      <div id="intro" className="w-full">
-        <motion.p
-          variants={childVariants}
-          className=" text-[4vw]/5 tablet:text-[3.5vw]/7 smLaptop:text-[3.2vw] laptop:text-[2vw] text-center italic"
-        >
-          Here’s a look at the roles and places that helped me grow as a
-          developer.
-        </motion.p>
-      </div>
-      <div id="cardContainer" className="w-full flex flex-col mt-10 gap-5">
+      <div id="cardContainer" className="w-full flex flex-col gap-5">
         {experiences.map((experience, i) => (
           <div key={i} className="w-full">
             <CareerCard

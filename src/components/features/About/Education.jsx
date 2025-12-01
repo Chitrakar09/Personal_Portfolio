@@ -55,24 +55,7 @@ function Education() {
           viewport={{ once: false }}
           className="w-full bg-background-dark text-text-light px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
         >
-          <div id="headingContainer" className="w-full flex flex-col items-center">
-            <motion.h1
-              variants={childVariants}
-              id="heading"
-              className="w-fit text-[13vw] tablet:text-[10vw] smLaptop:text-[6vw] laptop:text-[4vw] font-heading font-[1000] underline underline-offset-4"
-            >
-              Education
-            </motion.h1>
-          </div>
-          <div id="intro" className="w-full">
-            <motion.p
-              variants={childVariants}
-              className=" text-[4vw]/5 tablet:text-[3.5vw]/7 smLaptop:text-[3.2vw] laptop:text-[2vw] text-center italic"
-            >
-              Before the projects and roles came the learning — here’s where it all started.
-            </motion.p>
-          </div>
-          <div id="cardContainer" className="w-full flex flex-col mt-10 gap-10 scale-90">
+          <div id="cardContainer" className="w-full flex flex-col gap-10 scale-90">
             {educations.map((education, i) => (
               <div key={i} className="w-full">
                 <CareerCard

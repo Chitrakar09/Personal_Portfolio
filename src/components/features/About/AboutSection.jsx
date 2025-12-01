@@ -231,7 +231,7 @@ function AboutSection() {
           variants={headingVariants}
           initial={!hasAnimated && "hidden"}
           animate={!hasAnimated && "visible"}
-          className="text-left lg:text-left font-bold text-[8vh]/20 tablet:text-[13vh]/34 smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6.5dvw]/26 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10 mb-3 tablet:mb-8"
+          className="text-center lg:text-left font-bold text-[8vh]/20 tablet:text-[13vh]/34 smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6.5dvw]/26 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10 mb-3 tablet:mb-8"
         >
           Solving, creating, exploring with purpose.
         </motion.h1>
@@ -242,11 +242,11 @@ function AboutSection() {
           id="description"
           className="flex flex-col gap-2 4k:mb-3"
         >
-          <p className="text-text-muted text-left text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
+          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
             I’m a CSIT student and web developer passionate about building
             modern, responsive websites.{" "}
           </p>
-          <p className="text-text-muted text-left text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
+          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
             Currently, I’m sharpening my skills in Frontend frameworks such as React, Tailwind, and also
             problem-solving while working on personal projects to learn and
             grow.
@@ -256,7 +256,7 @@ function AboutSection() {
         <motion.div
           variants={AboutChildVariants}
           id="buttons"
-          className="w-full mt-5 3xl:mt-10 flex justify-start items-center gap-5"
+          className="w-full mt-5 3xl:mt-10 flex justify-center smLaptop:justify-start items-center gap-5"
         >
           <Button
             text="View Projects"

@@ -44,21 +44,13 @@ function CareerCard({
       viewport={{ once: false, amount: 0 }}
       whileHover={
         use === "experience" && {
-          scale: 1.15,
-          transition: { duration: 0.5, ease: "easeInOut" },
-        }
-      }
-      whileTap={
-        use === "experience" && {
-          scale: 1.15,
-          transition: { duration: 0.5, ease: "easeInOut" },
+          scale: 1.04,
+          transition: { duration: 0.3, ease: "easeInOut" },
         }
       }
       className={` w-full p-3 lgLaptop:px-8 lgLaptop:pb-8 ${border} ${
-        use === "experience" ? "scale-90" : null
-      } ${
         use === "experience" ? "rounded-xl" : null
-      } flex flex-col gap-2 bg-background-dark text-center`}
+      } flex flex-col gap-2 bg-background-dark text-start`}
     >
       <div id="title">
         <h1 className="font-[1000] text-[7vw] tablet:text-[6vw] smLaptop:text-[5.5vw] laptop:text-[3vw] 4k:text-[3.5vw] laptop:underline-offset-8 font-title underline underline-offset-3">
@@ -81,7 +73,7 @@ function CareerCard({
           </p>
         )}
         {tech && (
-          <div id="tech" className="w-full flex gap-3 flex-wrap justify-center">
+          <div id="tech" className="w-full flex gap-3 flex-wrap justify-start">
             {tech.map((tools, i) => (
               <button
                 key={i}
