@@ -53,13 +53,13 @@ function Education() {
           initial="initial"
           whileInView="visible"
           viewport={{ once: false }}
-          className="w-full bg-amber-50 text-background-dark px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2 rounded-t-3xl rounded-b-3xl border-t-8 border-accent-amber"
+          className="w-full bg-background-dark text-text-light px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
         >
           <div id="headingContainer" className="w-full flex flex-col items-center">
             <motion.h1
               variants={childVariants}
               id="heading"
-              className="w-fit text-[13vw] tablet:text-[10vw] smLaptop:text-[6vw] laptop:text-[4vw] font-heading font-[1000] underline underline-offset-4 hover:text-accent-tealGlow"
+              className="w-fit text-[13vw] tablet:text-[10vw] smLaptop:text-[6vw] laptop:text-[4vw] font-heading font-[1000] underline underline-offset-4"
             >
               Education
             </motion.h1>
@@ -72,7 +72,7 @@ function Education() {
               Before the projects and roles came the learning — here’s where it all started.
             </motion.p>
           </div>
-          <div id="cardContainer" className="w-full flex flex-col mt-10 gap-5">
+          <div id="cardContainer" className="w-full flex flex-col mt-10 gap-10 scale-90">
             {educations.map((education, i) => (
               <div key={i} className="w-full">
                 <CareerCard
@@ -81,7 +81,6 @@ function Education() {
                   details={education.details?education.details:null}
                   tech={education.tech?education.tech:null}
                   val={i}
-                  borderColor='accent-tealGlow'
                 />
               </div>
             ))}

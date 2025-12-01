@@ -1,50 +1,64 @@
 import React from "react";
 import { useState } from "react";
-import {motion} from 'motion/react'
+import { motion } from "motion/react";
 
 function CareerCard({
+  use = "",
   val = Number,
   title = "",
   date = "",
   details = "",
   tech = [],
-  borderColor="primary-golden"
+  borderColor = "primary-golden",
 }) {
-
   //initial values
   const border =
-    val % 2 === 0
-      ? `border-b-4 border-t-4 border-l-8 border-l-${borderColor}`
-      : `border-t-4 border-b-4 border-r-8 border-r-${borderColor}`;
-      
-  
+    use === "experience"
+      ? val % 2 === 0
+        ? `border-b-4 border-t-4 border-l-8`
+        : `border-t-4 border-b-4 border-r-8`
+      : "border-b-4";
+
   //animation
-  const animationDirection=val%2===0?-70:70;
-  const containerVariants={
-    initial:{
-      opacity:0,
-      x:animationDirection,
+  const animationDirection = val % 2 === 0 ? -70 : 70;
+  const containerVariants = {
+    initial: {
+      opacity: 0,
+      x: animationDirection,
     },
-    visible:{
-      opacity:1,
-      x:0,
-      transition:{
-        duration:1,
-        ease:"easeInOut"
-      }
-    }
-  }
-  
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: {
+        duration: 1,
+        ease: "easeInOut",
+      },
+    },
+  };
 
   return (
     <motion.div
-   variants={containerVariants}
+      variants={containerVariants}
       initial="initial"
       whileInView="visible"
-      viewport={{once:false,amount:0}}
-      whileHover={{scale:1.15,transition:{duration:0.5, ease:"easeInOut"}}}
-      whileTap={{scale:1.15,transition:{duration:0.5, ease:"easeInOut"}}}
-      className={` w-full p-3 lgLaptop:px-8 lgLaptop:pb-8 ${border} scale-90 rounded-xl flex flex-col gap-2`}
+      viewport={{ once: false, amount: 0 }}
+      whileHover={
+        use === "experience" && {
+          scale: 1.15,
+          transition: { duration: 0.5, ease: "easeInOut" },
+        }
+      }
+      whileTap={
+        use === "experience" && {
+          scale: 1.15,
+          transition: { duration: 0.5, ease: "easeInOut" },
+        }
+      }
+      className={` w-full p-3 lgLaptop:px-8 lgLaptop:pb-8 ${border} ${
+        use === "experience" ? "scale-90" : null
+      } ${
+        use === "experience" ? "rounded-xl" : null
+      } flex flex-col gap-2 bg-background-dark text-center`}
     >
       <div id="title">
         <h1 className="font-[1000] text-[7vw] tablet:text-[6vw] smLaptop:text-[5.5vw] laptop:text-[3vw] 4k:text-[3.5vw] laptop:underline-offset-8 font-title underline underline-offset-3">
@@ -56,15 +70,18 @@ function CareerCard({
           {date}
         </span>
       </div>
-      
-        <div
-          id="about"
-          className="w-full flex flex-col gap-1 tablet:gap-3 lgLaptop:gap-4"
-        >
-          {details&&<p className="font-medium tablet:text-xl smLaptop:text-2xl laptop:text-lg lgLaptop:text-[1.3vw] 4k:text-[1.57vw]">
+
+      <div
+        id="about"
+        className="w-full flex flex-col gap-1 tablet:gap-3 lgLaptop:gap-4"
+      >
+        {details && (
+          <p className="font-medium tablet:text-xl smLaptop:text-2xl laptop:text-lg lgLaptop:text-[1.3vw] 4k:text-[1.57vw]">
             {details}
-          </p>}
-          {tech&&<div id="tech" className="w-full flex gap-3 flex-wrap">
+          </p>
+        )}
+        {tech && (
+          <div id="tech" className="w-full flex gap-3 flex-wrap justify-center">
             {tech.map((tools, i) => (
               <button
                 key={i}
@@ -74,9 +91,9 @@ function CareerCard({
                 {tools}
               </button>
             ))}
-          </div>}
-        </div>
-  
+          </div>
+        )}
+      </div>
     </motion.div>
   );
 }

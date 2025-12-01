@@ -51,7 +51,7 @@ function Experience() {
       initial="initial"
       whileInView="visible"
       viewport={{ once: false }}
-      className="w-full bg-background-dark text-white px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2 rounded-t-3xl border-t-4 border-amber-50"
+      className="w-full bg-background-dark text-white px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
     >
       <div id="headingContainer" className="w-full flex flex-col items-center">
         <motion.h1
@@ -75,6 +75,7 @@ function Experience() {
         {experiences.map((experience, i) => (
           <div key={i} className="w-full">
             <CareerCard
+              use="experience"
               title={experience.title}
               date={experience.date}
               details={experience.details}

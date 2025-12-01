@@ -1,26 +1,27 @@
 import React from "react";
-import { NavLink } from "react-router";
+import { NavLink,useLocation } from "react-router";
 import { motion } from "motion/react";
 import { useMediaQuery } from "@mui/material";
 
 function Header() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
+  const location= useLocation();
   return (
     <motion.div
-      initial={{
+      initial={location.pathname==="/realm/about"&&{
         y: -1000,
       }}
-      animate={{
+      animate={location.pathname==="/realm/about"&&{
         y: 0,
         transition: {
-          delay: isDesktop?5.5:2.6,
+          delay: isDesktop?2.65:2.6,
           type: "spring",
-          damping: 16,
-          stiffness: 120,
+          damping: isDesktop?20:18,
+          stiffness: 100,
         },
       }}
       id="header"
-      className="bg-background-dark px-5 md:px-10 py-2 w-full flex flex-col md:flex-row justify-center md:justify-center items-center gap-5 rounded-b-3xl border-b-2 border-accent-amber"
+      className="px-5 md:px-10 py-2 w-full flex flex-col md:flex-row justify-center md:justify-center items-center gap-5"
     >
       <div
         id="intro"

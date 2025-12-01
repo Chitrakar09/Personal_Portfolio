@@ -1,11 +1,11 @@
 import React from "react";
-import { useMediaQuery } from "@mui/material";
 function Footer() {
-  const isDesktop = useMediaQuery("(min-width:1024px)");
+  const dateObj= new Date();
+  const year= dateObj.getFullYear();
   return (
     <div
       id="footer"
-      className="w-full rounded-t-[1.25rem] py-2 px-5 md:px-10 mt-5 flex justify-between items-center bg-background-dark border-t-4 border-amber-50 text-amber-50"
+      className="w-full py-2 px-5 md:px-10 flex justify-between items-center bg-background-dark text-amber-50"
     >
       <div
         id="copyright"
@@ -15,7 +15,7 @@ function Footer() {
           Pratyush Chitrakar
         </span>
         <span className="text-[3vw] md:text-[1.5vw] laptop:text-[0.8vw] font-bold flex flex-wrap">
-          © 2025 • Designed & Developed by Pratyush Chitrakar
+          © {`${year}`} • Designed & Developed by Pratyush Chitrakar
         </span>
       </div>
       <div

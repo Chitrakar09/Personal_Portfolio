@@ -32,11 +32,11 @@ function LandingPage() {
   };
   const infoChildVariants = {
     hidden: {
-      x: 20,
+      y: 20,
       opacity: 0,
     },
     visible: {
-      x: 0,
+      y: 0,
       opacity: 1,
       transition: {
         duration: 1,
@@ -81,7 +81,7 @@ function LandingPage() {
         <motion.p
           variants={infoChildVariants}
           id="title"
-          className="font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light m-0"
+          className="font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light mt-3"
         >
           Web Developer | UI/UX Enthusiast | CSIT Student
         </motion.p>

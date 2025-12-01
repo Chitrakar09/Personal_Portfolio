@@ -36,40 +36,31 @@ function AboutSection() {
   //Variants
   const avatarVariants = {
     hiddenDesktop: {
-      scale: 0.05,
-      x: -10000,
+      opacity:0,
+      x:-150,
     },
     visibleDesktop: {
-      x: 0,
-      scale: 1,
+      opacity:1,
+      x:0,
       transition: {
-        x: {
-          type: "spring",
-          damping: 16,
-          stiffness: 50,
-          mass: 2,
-        },
-        scale: {
-          delay: 1.9,
-          duration: 1.5,
+          duration: 2.2,
           ease: "easeInOut",
-        },
       },
     },
   };
   const headingVariants = {
     hidden: {
       opacity: 0,
-      x: isDesktop ? -100 : 0,
+      x:isDesktop?150:0,
       y: isDesktop ? 0 : 30,
     },
     visible: {
       opacity: 1,
-      x: 0,
+      x:0,
       y: 0,
       transition: {
-        delay: isDesktop ? 3.5 : 0,
-        duration: isDesktop ? 1.2 : 2,
+        delay: 0,
+        duration: isDesktop?2:2,
         ease: "easeInOut",
       },
     },
@@ -83,7 +74,7 @@ function AboutSection() {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 3.5,
+        delay: 2,
         duration: 1.2,
         ease: "easeInOut",
       },
@@ -97,7 +88,7 @@ function AboutSection() {
       opacity: 1,
       transition: {
         staggerChildren: 0.5,
-        delayChildren: 4.5,
+        delayChildren: 2,
       },
     },
   };
@@ -120,7 +111,7 @@ function AboutSection() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: isDesktop ? 4.7 : 2,
+        delayChildren: 2,
         staggerChildren: 0.5,
       },
     },
@@ -144,7 +135,7 @@ function AboutSection() {
     // Main container
     <div
       id="AboutContainer"
-      className="w-full h-full px-5 md:px-10 pt-8 tablet:pt-[8vh] smLaptop:pt-[12vh] pb-[10vh] smLaptop:pb-[20vh] laptop:pb-[20vh] lgLaptop:pb-[15vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
+      className="w-full h-full px-5 md:px-10 pt-[7vh] smLaptop:pt-[12vh] pb-[10vh] smLaptop:pb-[20vh] laptop:pb-[20vh] lgLaptop:pb-[15vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
       <div
@@ -222,6 +213,7 @@ function AboutSection() {
               />
             </a>
           </motion.div>
+          {/* buttons */}
         </motion.div>
       </div>
 
@@ -255,12 +247,11 @@ function AboutSection() {
             modern, responsive websites.{" "}
           </p>
           <p className="text-text-muted text-left text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.19dvw] 4k:text-[1.3dvw] lg:text-left">
-            Currently, I’m sharpening my skills in React, Tailwind, and
+            Currently, I’m sharpening my skills in Frontend frameworks such as React, Tailwind, and also
             problem-solving while working on personal projects to learn and
             grow.
           </p>
         </motion.div>
-
         {/* buttons */}
         <motion.div
           variants={AboutChildVariants}
