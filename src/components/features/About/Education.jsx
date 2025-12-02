@@ -21,11 +21,9 @@ function Education() {
   const containerVariants = {
     initial: {
       opacity: 0,
-      y: 100,
     },
     visible: {
       opacity: 1,
-      y: 0,
       transition: {
         duration: 1,
         staggerChildren:0,
@@ -33,19 +31,7 @@ function Education() {
       },
     },
   };
-
-  const childVariants={
-    initial:{
-      opacity:0,
-    },
-    visible:{
-      opacity:1,
-      transition:{
-        duration:1,
-        ease:"easeInOut"
-      }
-    }
-  }
+ 
   return (
     <motion.div
           id="experienceContainer"
