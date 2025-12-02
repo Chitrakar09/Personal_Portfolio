@@ -14,7 +14,7 @@ function Header() {
       animate={location.pathname==="/realm/about"&&{
         y: 0,
         transition: {
-          delay: isDesktop?2.65:1.5,
+          delay: isDesktop?1:0.2,
           type: "spring",
           damping: isDesktop?20:18,
           stiffness: 100,
@@ -47,7 +47,7 @@ function Header() {
             id="title"
             className="font-bold text-text-muted text-[0.7rem] ls:text-sm 3xl:text-xl"
           >
-            Web Developer | CSIT Student
+            Frontend Developer
           </div>
         </div>
       </div>

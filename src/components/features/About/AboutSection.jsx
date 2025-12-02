@@ -43,7 +43,7 @@ function AboutSection() {
       opacity:1,
       x:0,
       transition: {
-          duration: 2.2,
+          duration: 1,
           ease: "easeInOut",
       },
     },
@@ -60,7 +60,7 @@ function AboutSection() {
       y: 0,
       transition: {
         delay: 0,
-        duration: isDesktop?2:1,
+        duration: isDesktop?1:0.5,
         ease: "easeInOut",
       },
     },
@@ -74,8 +74,8 @@ function AboutSection() {
       opacity: 1,
       x: 0,
       transition: {
-        delay: 2,
-        duration: 1.2,
+        delay: 1,
+        duration: 1,
         ease: "easeInOut",
       },
     },
@@ -88,7 +88,7 @@ function AboutSection() {
       opacity: 1,
       transition: {
         staggerChildren: 0.5,
-        delayChildren: 2,
+        delayChildren: 1,
       },
     },
   };
@@ -111,8 +111,8 @@ function AboutSection() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: isDesktop?2:1,
-        staggerChildren: 0.5,
+        delayChildren: isDesktop?1:0.2,
+        staggerChildren: 0.2,
       },
     },
   };
@@ -125,7 +125,7 @@ function AboutSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1,
+        duration: 0.5,
         ease: "easeInOut",
       },
     },

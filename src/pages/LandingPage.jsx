@@ -83,7 +83,7 @@ function LandingPage() {
           id="title"
           className="font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light mt-3"
         >
-          Web Developer | UI/UX Enthusiast | CSIT Student
+          Web Developer | UI/UX Enthusiast
         </motion.p>
         <motion.div variants={infoChildVariants} id="button">
           <Link to="/realm/about">
