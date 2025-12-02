@@ -11,10 +11,6 @@ function Education() {
       title: "Higher Secondary Education - Grand Academy, Nepal",
       date: "2022-2024",
     },
-    {
-      title: "Secondary Education Examination (SEE) - Little Angel's School, Nepal",
-      date: "Completed in 2022",
-    },
   ];
 
   //animation
@@ -41,7 +37,7 @@ function Education() {
           viewport={{ once: false }}
           className="w-full bg-background-dark text-text-light px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
         >
-          <div id="cardContainer" className="w-full flex flex-col gap-10 scale-90">
+          <div id="cardContainer" className="w-full flex flex-col gap-10">
             {educations.map((education, i) => (
               <div key={i} className="w-full">
                 <CareerCard

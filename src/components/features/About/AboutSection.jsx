@@ -135,7 +135,7 @@ function AboutSection() {
     // Main container
     <div
       id="AboutContainer"
-      className="w-full h-full px-5 md:px-10 pt-[7vh] smLaptop:pt-[10vh] pb-[14vh] tablet:pb-[10vh] smLaptop:pb-[20vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-center lg:items-start gap-5 lg:gap-10 xl:gap-0"
+      className="w-full h-full px-5 md:px-10 pt-[5vh] smLaptop:pt-[10vh] pb-[5vh] tablet:pb-[5vh] smLaptop:pb-[10vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-start gap-15 lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
       <div
@@ -150,7 +150,7 @@ function AboutSection() {
           id="profilePic"
         >
           <ProfilePic
-            url="/profile.png"
+            url="/avatar.png"
             classname="smLaptop:w-[30dvw] smLaptop:h-[30dvw] laptop:w-[20dvw] laptop:h-[20dvw] lgLaptop:w-[20dvw] lgLaptop:h-[20dvw] 4k:w-[23dvw] lg:mb-2 4k:h-[23dvw] rounded-full bg-[rgba(255,213,74,0.52)] bg-center smLaptop:shadow-[0_0_131px_120px_rgba(255,213,74,0.56)]"
           />
         </motion.div>
@@ -230,9 +230,9 @@ function AboutSection() {
           variants={headingVariants}
           initial={!hasAnimated && "hidden"}
           animate={!hasAnimated && "visible"}
-          className="text-center lg:text-left font-bold text-[8vh]/15 tablet:text-[13vh]/34 smLaptop:text-[7.5dvw]/20 laptop:text-[5.8dvw]/17 lgLaptop:text-[6dvw]/18 4k:text-[7dvw]/45 lg:mb-5 lgLaptop:mb-10 mb-3 tablet:mb-8"
+          className="text-center lg:text-left font-bold text-[5vh]/15 tablet:text-[7vh]/25 smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[7dvw]/22 4k:text-[7dvw]/45 mb-6"
         >
-          Solving, creating, exploring with purpose.
+          Frontend Developer & UI/UX Enthusiast
         </motion.h1>
 
         {/* Description */}
@@ -241,14 +241,9 @@ function AboutSection() {
           id="description"
           className="flex flex-col gap-2 4k:mb-3"
         >
-          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.1dvw] 4k:text-[1.3dvw] lg:text-left">
-            I’m a CSIT student and web developer passionate about building
-            modern, responsive websites.{" "}
-          </p>
-          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.1dvw] 4k:text-[1.3dvw] lg:text-left">
-            Currently, I’m sharpening my skills in Frontend frameworks such as React, Tailwind, and also
-            problem-solving while working on personal projects to learn and
-            grow.
+          <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.25dvw] 4k:text-[1.3dvw] lg:text-left">
+            I translate complex design specifications into high-performance user experiences.
+            I specialize in building pixel-perfect, accessible interfaces using React and Tailwind.
           </p>
         </motion.div>
         {/* buttons */}

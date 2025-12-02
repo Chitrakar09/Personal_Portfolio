@@ -44,25 +44,25 @@ function CareerCard({
           transition: { duration: 0.3, ease: "easeInOut" },
         }
       }
-      className={` w-full p-3 lgLaptop:px-8 lgLaptop:pb-8 ${border} flex flex-col gap-2 bg-background-dark text-start`}
+      className={`px-8 py-1 lgLaptop:pb-8 ${border} flex flex-col gap-2 bg-background-dark text-base`}
     >
       <div id="title">
-        <h1 className="font-[1000] text-[7vw] tablet:text-[6vw] smLaptop:text-[5.5vw] laptop:text-[3vw] 4k:text-[3.5vw] laptop:underline-offset-8 font-title underline underline-offset-3">
+        <h1 className={`font-[1000] text-[6vw] tablet:text-[5vw] smLaptop:text-[2.5vw] laptop:text-[2.5vw] 4k:text-[3.5vw] laptop:underline-offset-8 font-title underline underline-offset-3 ${use==='experience'?'text-primary-golden':null}`}>
           {title}
         </h1>
       </div>
       <div id="timeline">
-        <span className="font-extrabold underline text-lg tablet:text-2xl smLaptop:text-3xl laptop:text-xl lgLaptop:text-[1.5vw] 4k:text-[1.7vw]">
+        <span className="font-extrabold underline text-lg tablet:text-xl smLaptop:text-xl laptop:text-xl lgLaptop:text-[1.2vw] 4k:text-[1.7vw]">
           {date}
         </span>
       </div>
 
       <div
         id="about"
-        className="w-full flex flex-col gap-1 tablet:gap-3 lgLaptop:gap-4"
+        className="w-full flex flex-col"
       >
         {details && (
-          <p className="font-medium tablet:text-xl smLaptop:text-2xl laptop:text-lg lgLaptop:text-[1.3vw] 4k:text-[1.57vw]">
+          <p className="font-medium tablet:text-xl smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.3vw] 4k:text-[1.57vw] flex flex-col gap-1">
             {details}
           </p>
         )}
@@ -72,7 +72,7 @@ function CareerCard({
               <button
                 key={i}
                 id="bubble"
-                className={`py-0.5 px-1.5 rounded-md font-bold tablet:text-xl smLaptop:text-2xl laptop:text-base lgLaptop:text-xl 4k:text-[1.6vw] bg-primary-golden text-background-dark`}
+                className={`py-0.5 px-1.5 rounded-md font-bold tablet:text-xl smLaptop:text-lg laptop:text-base lgLaptop:text-xl 4k:text-[1.6vw] bg-primary-golden text-background-dark`}
               >
                 {tools}
               </button>

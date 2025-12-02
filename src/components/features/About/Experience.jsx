@@ -6,10 +6,10 @@ function Experience() {
   //experience
   const experiences = [
     {
-      title: "Currently in Builder Phase",
-      date: "2023-Present",
+      title: "OpenJournal: Full-Stack Web App",
+      date: "2024-Present",
       details:
-        "Learning, experimenting, and building things. Currently turning curiosity into code and progress into projects.",
+        (<ul className="list-disc pl-5 space-y-1"><li>Engineered a dynamic user interface using React, implementing custom hooks and state management to ensure a performant and maintainable codebase.</li><li>Integrated the Appwrite BaaS (Backend-as-a-Service) for robust user authentication, data synchronization, and file storage, significantly reducing time spent on custom backend setup.</li><li>Developed a pixel-perfect, mobile-responsive layout across all major viewports using the utility-first approach of Tailwind CSS.</li></ul>),
     },
   ];
 

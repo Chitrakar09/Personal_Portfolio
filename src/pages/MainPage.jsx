@@ -4,7 +4,7 @@ import { Outlet } from 'react-router'
 
 function MainPage() {
   return (
-    <div id='mainContainer' className='w-full h-full flex flex-col justify-between items-center'>
+    <div id='mainContainer' className='h-full flex flex-col justify-start'>
       <Header />
       <Outlet />
     </div>

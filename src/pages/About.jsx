@@ -7,10 +7,10 @@ function About() {
   return (
     <div 
 
-    id='aboutPage' className='w-full flex flex-col'>
+    id='aboutPage' className='w-full flex flex-col justify-between'>
       <AboutSection/>  
       {hasAnimated&&<Career/>}
-      {hasAnimated&& <Footer />}
+      {hasAnimated&&<Footer/>}
       </div>
   )
 }
