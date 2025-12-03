@@ -29,7 +29,7 @@ function Header() {
       >
         <div
           id="logo"
-          className="bg-linear-[90deg,#FFD54A_0%,#0A2540_100%] font-bold text-4xl min-h-14 min-w-14 max-w-20 max-h-20 3xl:text-5xl 3xl:min-h-20 3xl:min-w-20 flex justify-center items-center rounded-2xl"
+          className="bg-linear-[90deg,#FFD54A_0%,#0A2540_100%] font-bold text-4xl min-h-14 min-w-14 max-w-20 max-h-20 4k:text-5xl 4k:min-h-20 4k:min-w-20 flex justify-center items-center rounded-2xl"
         >
           P
         </div>
@@ -39,26 +39,26 @@ function Header() {
         >
           <div
             id="name"
-            className="font-bold text-primary-golden text-[1.15rem] ms:text-xl ls:text-2xl 3xl:text-4xl"
+            className="font-bold text-primary-golden text-[1.15rem] ms:text-xl ls:text-2xl 4k:text-4xl"
           >
             Pratyush Chitrakar
           </div>
           <div
             id="title"
-            className="font-bold text-text-muted text-[0.7rem] ls:text-sm 3xl:text-xl"
+            className="font-bold text-text-muted text-[0.7rem] ls:text-sm 4k:text-xl"
           >
             Frontend Developer
           </div>
         </div>
       </div>
 
-      <nav className="w-full  text-[1rem] lg:text-[1.2rem] xl:text-[1.2rem] 3xl:text-[2rem] flex justify-between md:justify-end md:gap-10 items-center px-1">
+      <nav className="w-full  text-[1rem] lg:text-[1.2rem] xl:text-[1.2rem] 4k:text-[2rem] flex justify-between md:justify-end md:gap-10 items-center px-1">
         <NavLink
           to={"/realm/about"}
           className={({ isActive }) =>
             `hover:-translate-y-1 transition-all duration-200 ${
               isActive
-                ? "text-text-light underline underline-offset-8 -translate-y-1"
+                ? "text-text-light underline underline-offset-8 "
                 : "text-text-light/30"
             }`
           }
@@ -70,7 +70,7 @@ function Header() {
           className={({ isActive }) =>
             `hover:-translate-y-1 transition-all duration-200 ${
               isActive
-                ? "text-text-light underline underline-offset-8 -translate-y-1"
+                ? "text-text-light underline underline-offset-8"
                 : "text-text-light/30"
             }`
           }
@@ -82,7 +82,7 @@ function Header() {
           className={({ isActive }) =>
             `hover:-translate-y-1 transition-all duration-200 ${
               isActive
-                ? "text-text-light underline underline-offset-8 -translate-y-1"
+                ? "text-text-light underline underline-offset-8"
                 : "text-text-light/30"
             }`
           }

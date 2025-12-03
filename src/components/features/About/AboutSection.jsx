@@ -2,8 +2,8 @@ import React from "react";
 import ProfilePic from "../../ui/ProfilePic";
 import Button from "../../ui/Button";
 import { useNavigate } from "react-router";
-import { useMediaQuery } from "@mui/material";
-import { motion } from "motion/react";
+import { duration, useMediaQuery } from "@mui/material";
+import { motion, scale } from "motion/react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { isAnimated as checkForAnimated } from "@/features/checkAnimated/checkAnimatedSlice";
@@ -36,31 +36,31 @@ function AboutSection() {
   //Variants
   const avatarVariants = {
     hiddenDesktop: {
-      opacity:0,
-      x:-150,
+      opacity: 0,
+      x: -150,
     },
     visibleDesktop: {
-      opacity:1,
-      x:0,
+      opacity: 1,
+      x: 0,
       transition: {
-          duration: 1,
-          ease: "easeInOut",
+        duration: 1,
+        ease: "easeInOut",
       },
     },
   };
   const headingVariants = {
     hidden: {
       opacity: 0,
-      x:isDesktop?150:0,
+      x: isDesktop ? 150 : 0,
       y: isDesktop ? 0 : 30,
     },
     visible: {
       opacity: 1,
-      x:0,
+      x: 0,
       y: 0,
       transition: {
         delay: 0,
-        duration: isDesktop?1:0.5,
+        duration: isDesktop ? 1 : 0.5,
         ease: "easeInOut",
       },
     },
@@ -111,7 +111,7 @@ function AboutSection() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: isDesktop?1:0.2,
+        delayChildren: isDesktop ? 1 : 0.2,
         staggerChildren: 0.2,
       },
     },
@@ -130,10 +130,11 @@ function AboutSection() {
       },
     },
   };
+  
 
   return (
     // Main container
-    <div
+    <motion.div
       id="AboutContainer"
       className="w-full h-full px-5 md:px-10 pt-[5vh] smLaptop:pt-[10vh] pb-[5vh] tablet:pb-[5vh] smLaptop:pb-[10vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-start gap-15 lg:gap-10 xl:gap-0"
     >
@@ -174,8 +175,9 @@ function AboutSection() {
           {/* title */}
           <motion.span
             variants={profileChildVariants}
-            className="text-text-light/60 smLaptop:text-[2dvw] laptop:text-[1.5dvw] lgLaptop:text-[1.5dvw] text-center mb-2"
-          >chitrakarpratyush@gmail.com
+            className="text-text-light/60 smLaptop:text-[2dvw] laptop:text-[1.5dvw] lgLaptop:text-[1.5dvw] text-center mb-4"
+          >
+            chitrakarpratyush@gmail.com
           </motion.span>
 
           {/* tech stack */}
@@ -184,25 +186,69 @@ function AboutSection() {
             id="tech_stack"
             className="w-full flex justify-center gap-3 items-center text-amber-50"
           >
-            <a href="https://github.com/Chitrakar09" target="_blank">
+            <motion.a
+              whileInView={hasAnimated&&{
+                y:[0,-10,0],
+                transition:{
+                  repeat:Infinity,
+                  repeatType:"loop",
+                  duration:2
+                }
+              }}
+              href="https://github.com/Chitrakar09"
+              target="_blank"
+            >
               <FontAwesomeIcon
                 icon={faGithub}
                 className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
               />
-            </a>
-            <a href="https://www.instagram.com/chitrakar_09/" target="_blank">
+            </motion.a>
+            <motion.a
+              whileInView={hasAnimated&&{
+                y:[0,-10,0],
+                transition:{
+                  delay:0.25,
+                  repeat:Infinity,
+                  repeatType:'loop',
+                  duration:2
+                }
+              }}
+              href="https://www.instagram.com/chitrakar_09/"
+              target="_blank"
+            >
               <FontAwesomeIcon
                 icon={faInstagram}
                 className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
               />
-            </a>
-            <a href="https://www.facebook.com/chitrakar09/" target="_blank">
+            </motion.a>
+            <motion.a
+              whileInView={hasAnimated&&{
+                y:[0,-10,0],
+                transition:{
+                  delay:0.5,
+                  repeat:Infinity,
+                  repeatType:'loop',
+                  duration:2
+                }
+              }}
+              href="https://www.facebook.com/chitrakar09/"
+              target="_blank"
+            >
               <FontAwesomeIcon
                 icon={faFacebook}
                 className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
               />
-            </a>
-            <a
+            </motion.a>
+            <motion.a
+            whileInView={hasAnimated&&{
+                y:[0,-10,0],
+                transition:{
+                  delay:0.75,
+                  repeat:Infinity,
+                  repeatType:'loop',
+                  duration:2
+                }
+              }}
               href="https://www.linkedin.com/in/pratyush-chitrakar/"
               target="_blank"
             >
@@ -210,7 +256,7 @@ function AboutSection() {
                 icon={faLinkedin}
                 className="smLaptop:text-[2.5dvw] laptop:text-[1.7dvw] lgLaptop:text-[2dvw] 4k:text-[2dvw] hover:text-accent-amber hover:-translate-y-1 transition-all duration-200"
               />
-            </a>
+            </motion.a>
           </motion.div>
           {/* buttons */}
         </motion.div>
@@ -230,9 +276,9 @@ function AboutSection() {
           variants={headingVariants}
           initial={!hasAnimated && "hidden"}
           animate={!hasAnimated && "visible"}
-          className="text-center lg:text-left font-bold text-[5vh]/15 tablet:text-[7vh]/25 smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[7dvw]/22 4k:text-[7dvw]/45 mb-6"
+          className="text-center lg:text-left font-bold text-[5vh]/15 tablet:text-[4.5rem] smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[6rem] 4k:text-[20rem]/[20rem] mb-6"
         >
-          Frontend Developer & UI/UX Enthusiast
+          Frontend Developer & Performance Specialist
         </motion.h1>
 
         {/* Description */}
@@ -242,8 +288,9 @@ function AboutSection() {
           className="flex flex-col gap-2 4k:mb-3"
         >
           <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.25dvw] 4k:text-[1.3dvw] lg:text-left">
-            I translate complex design specifications into high-performance user experiences.
-            I specialize in building pixel-perfect, accessible interfaces using React and Tailwind.
+            I translate complex design specifications into high-performance user
+            experiences. I specialize in building pixel-perfect, accessible
+            interfaces using React and Tailwind.
           </p>
         </motion.div>
         {/* buttons */}
@@ -268,7 +315,7 @@ function AboutSection() {
           />
         </motion.div>
       </motion.div>
-    </div>
+    </motion.div>
   );
 }
 

@@ -67,7 +67,7 @@ function Contact() {
   }
   return (
     <div id='container' className='w-full h-full flex flex-col justify-between'>
-      <div id="content" className='w-full h-full py-10 px-12 flex flex-col justify-start gap-5 items-center'>
+      <div id="content" className='w-full h-full py-10 px-12 flex flex-col justify-center gap-5 items-center'>
         <div id='heading'>
           <h1 className='text-text-light font-extrabold text-3xl underline underline-offset-4'>Get in Touch</h1>
         </div>

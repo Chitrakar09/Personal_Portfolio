@@ -1,6 +1,7 @@
 import React from 'react'
 import { AboutSection, Career,Footer } from '@/components'
 import { useSelector } from 'react-redux'
+import { Projects } from '.';
 
 function About() {
   const hasAnimated=useSelector((state)=>state.checkForAnimated.hasAnimated);

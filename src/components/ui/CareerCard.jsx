@@ -62,9 +62,10 @@ function CareerCard({
         className="w-full flex flex-col"
       >
         {details && (
-          <ul className="font-medium tablet:text-xl smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.3vw] 4k:text-[1.57vw] flex flex-col gap-1">
+          <motion.ul
+          className="font-medium text-text-muted tablet:text-xl smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.3vw] 4k:text-[1.57vw] flex flex-col gap-1">
             {details}
-          </ul>
+          </motion.ul>
         )}
         {tech && (
           <div id="tech" className="w-full flex gap-3 flex-wrap justify-start">

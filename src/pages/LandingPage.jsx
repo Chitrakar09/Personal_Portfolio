@@ -65,7 +65,7 @@ function LandingPage() {
         initial="hidden"
         animate="visible"
         id="info"
-        className="text-text-light text-center flex flex-col items-center justify-center gap-1 "
+        className="text-text-light text-center flex flex-col items-center justify-center "
       >
         <motion.p
           variants={infoChildVariants}
@@ -81,9 +81,9 @@ function LandingPage() {
         <motion.p
           variants={infoChildVariants}
           id="title"
-          className="font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light mt-3"
+          className="font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light mt-1"
         >
-          Web Developer | UI/UX Enthusiast
+          Web Developer | Performance Specialist
         </motion.p>
         <motion.div variants={infoChildVariants} id="button">
           <Link to="/realm/about">
