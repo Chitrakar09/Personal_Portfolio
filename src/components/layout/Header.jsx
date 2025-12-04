@@ -21,7 +21,7 @@ function Header() {
         },
       }}
       id="header"
-      className="px-5 md:px-10 py-2 w-full flex flex-col md:flex-row justify-center md:justify-center items-center gap-5"
+      className="bg-black px-5 md:px-10 py-2 w-full flex flex-col md:flex-row justify-center md:justify-center items-center gap-5"
     >
       <div
         id="intro"

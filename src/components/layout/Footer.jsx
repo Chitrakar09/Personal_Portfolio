@@ -9,7 +9,7 @@ function Footer() {
     >
       <div
         id="copyright"
-        className="flex flex-col items-start justify-center w-full"
+        className="flex flex-col items-center smLaptop:items-start justify-center w-full"
       >
         <span className="text-[3vw] md:text-[1.5vw] laptop:text-[0.8vw] font-bold flex flex-wrap">
           © {`${year}`} • Designed & Developed by Pratyush Chitrakar

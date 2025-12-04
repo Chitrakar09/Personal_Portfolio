@@ -4,5 +4,6 @@ import Header from "./layout/Header";
 import Footer from "./layout/Footer";
 import AboutSection from "./features/About/AboutSection";
 import Career from "./features/About/Career";
-import CareerCard from "./ui/CareerCard";
-export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard};
+import CareerCard from "./features/About/CareerCard";
+import ProjectCard from "./features/Projects/ProjectCard";
+export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard, ProjectCard};

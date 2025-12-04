@@ -26,15 +26,14 @@ function Career() {
   return (
     <div
       id="careerContainer"
-      className="w-full flex flex-col justify-evenly items-center smLaptop:items-start gap-5 mb-10"
+      className="w-full flex flex-col items-center smLaptop:items-center gap-5 mb-10"
     >
       <motion.div
       variants={tabVariants}
       initial="initial"
       whileInView="visible"
-      viewport={{once:false}}
         id="tab"
-        className="bg-background-dark mx-5 md:mx-10 py-1 px-5 tablet:px-10 smLaptop:px-7 text-text-light flex text-[4vw] tablet:text-[3.5vw] smLaptop:text-[2vw] laptop:text-[1.5vw] font-bold gap-5 border-b-2"
+        className="bg-black mx-5 md:mx-10 py-1 px-5 tablet:px-10 smLaptop:px-7 text-text-light flex text-[4vw] tablet:text-[3.5vw] smLaptop:text-[2vw] laptop:text-[1.5vw] font-bold gap-5 border-b-2"
       >
         <button onClick={() => (setState("experience"))} className={(state==="experience")?' text-primary-golden transition-all delay-75 underline underline-offset-2':null}>Timeline</button>
         <button onClick={() => setState("education")} className={(state==="education")?' text-primary-golden transition-all delay-75 underline underline-offset-2':null}>Education</button>

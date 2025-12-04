@@ -136,12 +136,12 @@ function AboutSection() {
     // Main container
     <motion.div
       id="AboutContainer"
-      className="w-full h-full px-5 md:px-10 pt-[5vh] smLaptop:pt-[10vh] pb-[5vh] tablet:pb-[5vh] smLaptop:pb-[10vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-background-dark flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-start gap-15 lg:gap-10 xl:gap-0"
+      className="w-full h-full px-5 md:px-10 pt-[5vh] smLaptop:pt-[10vh] pb-[5vh] tablet:pb-[5vh] smLaptop:pb-[10vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-black flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-start gap-15 lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
       <div
         id="profile"
-        className="w-full hidden smLaptop:flex flex-col justify-center items-center px-2.5 lg:pl-5 rounded-2xl lg:order-2"
+        className="w-full hidden smLaptop:flex flex-col justify-center items-center px-2.5 lg:pl-5 rounded-2xl lg:order-2 scale-110"
       >
         {/* Profile Pic */}
         <motion.div
@@ -276,6 +276,14 @@ function AboutSection() {
           variants={headingVariants}
           initial={!hasAnimated && "hidden"}
           animate={!hasAnimated && "visible"}
+          whileInView={(hasAnimated&&!isDesktop)&&{
+                y:[0,-10,0],
+                transition:{
+                  repeat:Infinity,
+                  repeatType:'loop',
+                  duration:3
+                }
+              }}
           className="text-center lg:text-left font-bold text-[5vh]/15 tablet:text-[4.5rem] smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[6rem] 4k:text-[20rem]/[20rem] mb-6"
         >
           Frontend Developer & Performance Specialist

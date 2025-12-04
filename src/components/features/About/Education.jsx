@@ -17,12 +17,13 @@ function Education() {
   const containerVariants = {
     initial: {
       opacity: 0,
+      y:10
     },
     visible: {
       opacity: 1,
+      y:0,
       transition: {
         duration: 1,
-        staggerChildren:0,
         ease: "easeInOut",
       },
     },
@@ -37,7 +38,7 @@ function Education() {
           viewport={{ once: false }}
           className="w-full bg-background-dark text-text-light px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
         >
-          <div id="cardContainer" className="w-full flex flex-col gap-10 scale-x-95">
+          <div id="cardContainer" className=" flex flex-col gap-10">
             {educations.map((education, i) => (
               <div key={i} className="w-full">
                 <CareerCard
