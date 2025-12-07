@@ -25,13 +25,13 @@ function CareerCard({
   const containerVariants = {
     initial: {
       opacity: 0,
-      x: use==='experience'&&animationDirection,
+      x:animationDirection,
     },
     visible: {
       opacity: 1,
-      x: use==='experience'&&0,
+      x: 0,
       transition: {
-        duration: use==='experience'?0.7:0.5,
+        duration:0.7,
         ease: "easeInOut",
       },
     },

@@ -30,15 +30,16 @@ function Education() {
   };
  
   return (
-    <motion.div
+    <div
           id="experienceContainer"
+          className=" bg-black text-text-light px-5 md:px-10 py-5 flex flex-col gap-10"
+        >
+          <motion.h1
           variants={containerVariants}
           initial="initial"
           whileInView="visible"
           viewport={{ once: false }}
-          className=" bg-black text-text-light px-5 md:px-10 py-5 flex flex-col gap-10"
-        >
-          <h1 className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-center text-primary-golden smLaptop:text-start">Education</h1>
+          className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-center text-primary-golden smLaptop:text-start">Education</motion.h1>
           <div id="cardContainer" className=" flex flex-col gap-5">
             {educations.map((education, i) => (
               <div key={i} className="w-full">
@@ -52,7 +53,7 @@ function Education() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
   )
 }
 
