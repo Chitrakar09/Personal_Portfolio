@@ -7,7 +7,7 @@ function About() {
   return (
     <div 
 
-    id='aboutPage' className='w-full flex flex-col justify-between gap-10 smLaptop:gap-20'>
+    id='aboutPage' className='w-full flex flex-col justify-between gap-10 smLaptop:gap-30'>
       <AboutSection/>  
       {hasAnimated&&<Career/>}
       {hasAnimated&&<FeaturedProject/>}

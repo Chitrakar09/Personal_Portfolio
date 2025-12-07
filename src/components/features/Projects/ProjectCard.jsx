@@ -27,7 +27,7 @@ function ProjectCard({ project, Key }) {
       initial="initial"
       {...(isDesktop ? { whileInView: "visible" } : { animate: "visible" })}
       key={Key}
-      className={`w-full flex flex-col smLaptop:flex-row mx-auto bg-background-dark border border-primary-golden rounded-xl shadow-lg transition duration-300 hover:shadow-accent-amber hover:scale-105`}
+      className={`w-full tablet:w-2/3 smLaptop:w-11/12 flex flex-col smLaptop:flex-row mx-auto bg-background-dark border border-primary-golden rounded-xl shadow-lg transition duration-300 hover:shadow-accent-amber hover:scale-105`}
     >
       {/* image */}
       <img

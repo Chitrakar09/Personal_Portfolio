@@ -48,7 +48,7 @@ const headingVariants={
       viewport={{ once: false }}
       className="w-full text-white px-5 md:px-10 py-5 flex flex-col items-center smLaptop:items-start gap-8 smLaptop:gap-6 4k:gap-10"
     >
-      <motion.h1 variants={headingVariants} initial="initial" whileInView={"visible"} viewport={{once:false,amount:'all'}} className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden">Experience</motion.h1>
+      <motion.h1 variants={headingVariants} initial="initial" whileInView={"visible"} className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden">Experience</motion.h1>
       <div id="cardContainer" className="w-full flex flex-col gap-5">
         {experiences.map((experience, i) => (
           <div key={i} className="w-full">

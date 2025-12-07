@@ -19,18 +19,6 @@ function FeaturedProject() {
           github: "https://github.com/Chitrakar09/OpenJournal-Blog-Project",
           url: "https://openjournal.netlify.app/home",
         },
-        {
-          imgSrc: "/projects/OpenJournal.png",
-          title: "OpenJournal: Full-Stack SPA",
-          github: "https://github.com/Chitrakar09/OpenJournal-Blog-Project",
-          url: "https://openjournal.netlify.app/home",
-        },
-        {
-          imgSrc: "/projects/OpenJournal.png",
-          title: "OpenJournal: Full-Stack SPA",
-          github: "https://github.com/Chitrakar09/OpenJournal-Blog-Project",
-          url: "https://openjournal.netlify.app/home",
-        },
       ]
     : [
         {
@@ -91,14 +79,14 @@ const projectVariants={
           initial="initial"
           whileInView={"visible"}
             key={i}
-            className={`w-full smLaptop:w-1/3 rounded-xl p-5 border-2 border-primary-golden flex flex-col items-center gap-5 bg-background-dark hover:scale-110 ${i%2===0?'hover:-rotate-1':'hover:rotate-1'} transition-all duration-300 ease-out`}
+            className={`w-full tablet:w-2/3 smLaptop:w-1/3 rounded-xl p-5 border-2 border-primary-golden flex flex-col items-center gap-5 bg-background-dark hover:scale-110 ${i%2===0?'hover:-rotate-1':'hover:rotate-1'} transition-all duration-300 ease-out`}
           >
             <img src={project.imgSrc} className="w-full rounded-lg" />
-            <h3 className="text-xl smLaptop:text-2xl 4k:text-5xl font-bold text-primary-golden text-center">
+            <h3 className="text-xl smLaptop:text-lg laptop:text-2xl 4k:text-5xl font-bold text-primary-golden text-center">
               {project.title}
             </h3>
             <div className="flex gap-5 items-center justify-center">
-              <div className="flex justify-start items-center gap-5 text-xl 4k:text-3xl text-text-light">
+              <div className="flex justify-start items-center gap-5 text-xl smLaptop:text-[0.945rem] laptop:text-xl 4k:text-3xl text-text-light">
                 <a
                   href={project.github}
                   target="_blank"

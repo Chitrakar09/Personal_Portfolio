@@ -72,7 +72,6 @@ function SkillsSection() {
         variants={headingVariants}
         initial="initial"
         whileInView={"visible"}
-        viewport={{ once: false }}
         className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden"
       >
         Skills
