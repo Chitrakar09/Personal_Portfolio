@@ -7,4 +7,5 @@ import Career from "./features/About/Career";
 import CareerCard from "./features/About/CareerCard";
 import ProjectCard from "./features/Projects/ProjectCard";
 import SkillsSection from "./features/About/SkillsSection";
-export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard, ProjectCard,SkillsSection};
+import SkillContainer from "./ui/SkillContainer";
+export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard, ProjectCard,SkillsSection,SkillContainer};

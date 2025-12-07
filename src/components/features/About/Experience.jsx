@@ -22,13 +22,23 @@ function Experience() {
       opacity: 1,
       transition: {
         duration: 1,
-        staggerChildren:0,
         ease: "easeInOut",
       },
     },
   };
   
-
+const headingVariants={
+  initial:{
+    y:30,
+  },
+  visible:{
+    y:0,
+    transition:{
+      duration:0.5,
+      ease:"easeInOut"
+    }
+  }
+}
   return (
     <motion.div
       id="experienceContainer"
@@ -36,8 +46,9 @@ function Experience() {
       initial="initial"
       whileInView="visible"
       viewport={{ once: false }}
-      className="w-full text-white px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
+      className="w-full text-white px-5 md:px-10 py-5 flex flex-col items-center smLaptop:items-start gap-8 smLaptop:gap-6 4k:gap-10"
     >
+      <motion.h1 variants={headingVariants} initial="initial" whileInView={"visible"} viewport={{once:false,amount:'all'}} className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden">Experience</motion.h1>
       <div id="cardContainer" className="w-full flex flex-col gap-5">
         {experiences.map((experience, i) => (
           <div key={i} className="w-full">

@@ -17,7 +17,7 @@ function Education() {
   const containerVariants = {
     initial: {
       opacity: 0,
-      y:10
+      y:30
     },
     visible: {
       opacity: 1,
@@ -36,8 +36,9 @@ function Education() {
           initial="initial"
           whileInView="visible"
           viewport={{ once: false }}
-          className=" bg-black text-text-light px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
+          className=" bg-black text-text-light px-5 md:px-10 py-5 flex flex-col gap-10"
         >
+          <h1 className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-center text-primary-golden smLaptop:text-start">Education</h1>
           <div id="cardContainer" className=" flex flex-col gap-5">
             {educations.map((education, i) => (
               <div key={i} className="w-full">

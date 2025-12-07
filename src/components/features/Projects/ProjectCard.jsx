@@ -41,7 +41,7 @@ function ProjectCard({ project, Key }) {
           {project.title}
         </h3>
         {/* description */}
-        <div className="text-text-muted text-sm smLaptop:text-base lgLaptop:text-lg 4k:text-3xl mb-4 4k:mb-8 flex flex-col justify-between gap-2 4k:gap-4 flex-grow">
+        <div className="text-text-muted text-sm tablet:text-lg smLaptop:text-base lgLaptop:text-lg 4k:text-3xl mb-4 4k:mb-8 flex flex-col justify-between gap-2 4k:gap-4 flex-grow">
           {project.intro}
           {(isInViewMore && isDesktop) && project.description}
           {(isDesktop)? isInViewMore ? (

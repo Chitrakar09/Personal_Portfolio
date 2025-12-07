@@ -1,44 +1,24 @@
 import React from "react";
 import Experience from "./Experience";
 import Education from "./Education";
-import { useState } from "react";
-import {motion} from 'motion/react'
+import { SkillsSection } from "@/components";
 
 function Career() {
-  const [state, setState] = useState("experience");
-
-  //Animation for tab
-
-  const tabVariants={
-    initial:{
-      opacity:0,
-      y:20
-    },
-    visible:{
-      opacity:1,
-      y:0,
-      transition:{
-        duration:1,
-        ease:"easeInOut"
-      }
-    }
-  }
   return (
     <div
       id="careerContainer"
-      className="w-full flex flex-col items-center smLaptop:items-center gap-5 mb-10"
+      className="w-full flex flex-col items-center smLaptop:items-center gap-10 smLaptop:gap-30 4k:gap-60 mb-10"
     >
-      <motion.div
-      variants={tabVariants}
-      initial="initial"
-      whileInView="visible"
-        id="tab"
-        className="bg-black mx-5 md:mx-10 py-1 px-5 tablet:px-10 smLaptop:px-7 text-text-light flex text-[4vw] tablet:text-[3.5vw] smLaptop:text-[2vw] laptop:text-[1.5vw] font-bold gap-5 border-b-2"
+      <div
+        id="skillsAndExperienceContainer"
+        className="w-full flex flex-col smLaptop:flex-row justify-center gap-10 smLaptop:gap-0"
       >
-        <button onClick={() => (setState("experience"))} className={(state==="experience")?' text-primary-golden transition-all delay-75 underline underline-offset-2':null}>Timeline</button>
-        <button onClick={() => setState("education")} className={(state==="education")?' text-primary-golden transition-all delay-75 underline underline-offset-2':null}>Education</button>
-      </motion.div>
-      {state === "experience" ? <Experience /> : <Education />}
+        <SkillsSection />
+        <div className="flex flex-col gap-10">
+          <Experience />
+          <Education />
+        </div>
+      </div>
     </div>
   );
 }
