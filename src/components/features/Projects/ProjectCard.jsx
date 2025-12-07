@@ -16,7 +16,7 @@ function ProjectCard({ project, Key }) {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1.5,
+        duration: 0.7,
         ease: "easeInOut",
       },
     },
