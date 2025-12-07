@@ -3,7 +3,7 @@ import ProfilePic from "../../ui/ProfilePic";
 import Button from "../../ui/Button";
 import { useNavigate } from "react-router";
 import { useMediaQuery } from "@mui/material";
-import { motion, scale } from "motion/react";
+import { motion } from "motion/react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { isAnimated as checkForAnimated } from "@/features/checkAnimated/checkAnimatedSlice";
