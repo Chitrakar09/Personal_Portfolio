@@ -2,7 +2,7 @@ import React from "react";
 import ProfilePic from "../../ui/ProfilePic";
 import Button from "../../ui/Button";
 import { useNavigate } from "react-router";
-import { duration, useMediaQuery } from "@mui/material";
+import { useMediaQuery } from "@mui/material";
 import { motion, scale } from "motion/react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";

@@ -13,7 +13,7 @@ function LandingPage() {
       opacity: 1,
       transition: {
         delay: 0.2,
-        duration: 3,
+        duration: 2,
         ease: "easeOut",
       },
     },
@@ -25,8 +25,8 @@ function LandingPage() {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.6,
-        staggerChildren: 0.6,
+        delayChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };

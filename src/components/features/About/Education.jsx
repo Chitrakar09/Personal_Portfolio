@@ -36,9 +36,9 @@ function Education() {
           initial="initial"
           whileInView="visible"
           viewport={{ once: false }}
-          className="w-full bg-black text-text-light px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
+          className=" bg-black text-text-light px-5 md:px-10 py-5 flex flex-col gap-2 tablet:gap-2"
         >
-          <div id="cardContainer" className=" flex flex-col gap-10">
+          <div id="cardContainer" className=" flex flex-col gap-5">
             {educations.map((education, i) => (
               <div key={i} className="w-full">
                 <CareerCard

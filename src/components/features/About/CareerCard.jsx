@@ -1,4 +1,5 @@
 import React from "react";
+import { useMediaQuery } from "@mui/material";
 import { motion } from "motion/react";
 
 function CareerCard({
@@ -9,10 +10,14 @@ function CareerCard({
   details = "",
   tech = [],
 }) {
+
+  const isDesktop = useMediaQuery("(min-width:1024px)");
+
+
   //initial values
   const border =
     use === "experience"
-      ? 'border-l-8'
+      ? 'border-l-4 smLaptop:border-l-8'
       : "border-b-4";
 
   //animation
@@ -38,15 +43,15 @@ function CareerCard({
       initial="initial"
       whileInView="visible"
       viewport={{ once: false, amount: 0 }}
-      className={`px-8 py-1 lgLaptop:pb-8 ${border} flex flex-col gap-2 ${use==='experience'?'text-left':'text-center'}`}
+      className={`px-8 py-1 lgLaptop:pb-5 ${border} flex flex-col gap-2 ${use==='experience'?'text-left':'text-center'}`}
     >
       <div id="title">
-        <h1 className={`font-[1000] text-center text-[6vw] tablet:text-[5vw] smLaptop:text-[2.5vw] laptop:text-[2.5vw] 4k:text-[3.5vw] laptop:underline-offset-8 font-title underline underline-offset-3 ${use==='experience'?'text-primary-golden text-left':null}`}>
+        <h1 className={`font-[1000] text-center ${use==='experience'?'text-[6vw] tablet:text-[5vw] smLaptop:text-[2.5vw] laptop:text-[2.5vw] 4k:text-[3.5vw]':'text-[4vw] tablet:text-[2.5vw] smLaptop:text-[1.7vw] laptop:text-[1.5vw] 4k:text-[3.5vw] '} laptop:underline-offset-8 font-title underline underline-offset-3 ${use==='experience'?'text-primary-golden text-left':null}`}>
           {title}
         </h1>
       </div>
       <div id="timeline">
-        <h3 className={`font-extrabold underline text-center text-lg tablet:text-xl smLaptop:text-xl laptop:text-xl lgLaptop:text-[1.2vw] 4k:text-[1.7vw] ${use==='experience'?'text-left':null}`}>
+        <h3 className={`font-extrabold underline text-center ${use==='experience'?'text-base tablet:text-xl smLaptop:text-xl laptop:text-xl lgLaptop:text-[1.2vw] 4k:text-[1.7vw]':'text-base tablet:text-lg smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.1vw] 4k:text-[1.7vw] text-text-muted'} ${use==='experience'?'text-left':null}`}>
           {date}
         </h3>
       </div>
@@ -55,7 +60,7 @@ function CareerCard({
         id="about"
         className="w-full flex flex-col"
       >
-        {details && (
+        {(details&&isDesktop) && (
           <motion.ul
           className="font-medium text-text-muted tablet:text-xl smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.3vw] 4k:text-[1.57vw] flex flex-col gap-1">
             {details}
