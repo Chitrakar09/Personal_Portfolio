@@ -12,6 +12,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faFacebook } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faLocationDot } from "@fortawesome/free-solid-svg-icons";
 
 function AboutSection() {
   //useNavigate
@@ -152,7 +153,7 @@ function AboutSection() {
         >
           <ProfilePic
             url="/avatar.png"
-            classname="smLaptop:w-[30dvw] smLaptop:h-[30dvw] laptop:w-[20dvw] laptop:h-[20dvw] lgLaptop:w-[20dvw] lgLaptop:h-[20dvw] 4k:w-[23dvw] lg:mb-2 4k:h-[23dvw] rounded-full bg-[rgba(255,213,74,0.52)] bg-center smLaptop:shadow-[0_0_131px_120px_rgba(255,213,74,0.56)]"
+            classname="smLaptop:w-[25dvw] smLaptop:h-[25dvw] laptop:w-[20dvw] laptop:h-[20dvw] lgLaptop:w-[19dvw] lgLaptop:h-[19dvw] 4k:w-[23dvw] lg:mb-2 4k:h-[23dvw] rounded-full bg-[rgba(255,213,74,0.52)] bg-center smLaptop:shadow-[0_0_131px_120px_rgba(255,213,74,0.56)]"
           />
         </motion.div>
 
@@ -175,9 +176,10 @@ function AboutSection() {
           {/* title */}
           <motion.span
             variants={profileChildVariants}
-            className="text-text-light/60 smLaptop:text-[2dvw] laptop:text-[1.5dvw] lgLaptop:text-[1.5dvw] text-center mb-4"
+            className="text-text-light/60 smLaptop:text-[2dvw] laptop:text-[1.5dvw] lgLaptop:text-[1.5dvw] text-center mb-4 flex flex-col"
           >
-            chitrakarpratyush@gmail.com
+            <span>chitrakarpratyush@gmail.com</span>
+            <span className="smLaptop:text-[1.5dvw] laptop:text-[1dvw] lgLaptop:text-[1dvw]"><FontAwesomeIcon icon={faLocationDot}/>Nepal</span>
           </motion.span>
 
           {/* tech stack */}
