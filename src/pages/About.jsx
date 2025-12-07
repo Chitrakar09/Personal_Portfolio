@@ -1,5 +1,5 @@
 import React from 'react'
-import { AboutSection, Career,Footer } from '@/components'
+import { AboutSection, Career,Footer, } from '@/components'
 import { useSelector } from 'react-redux'
 
 function About() {

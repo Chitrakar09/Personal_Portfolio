@@ -6,4 +6,5 @@ import AboutSection from "./features/About/AboutSection";
 import Career from "./features/About/Career";
 import CareerCard from "./features/About/CareerCard";
 import ProjectCard from "./features/Projects/ProjectCard";
-export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard, ProjectCard};
+import SkillsSection from "./features/About/SkillsSection";
+export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard, ProjectCard,SkillsSection};
