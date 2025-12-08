@@ -57,7 +57,7 @@ function LandingPage() {
       >
         <ProfilePic
           url="/profile_Landing.jpg"
-          classname="min-w-52 min-h-52 lg:w-70 lg:h-70 rounded-full bg-top shadow-[0_0_131px_100px_rgba(255,213,74,0.56)]"
+          classname="min-w-52 min-h-52 lg:w-90 lg:h-90 rounded-full bg-bottom shadow-[0_0_131px_100px_rgba(255,213,74,0.56)]"
         />
       </motion.div>
       <motion.div
