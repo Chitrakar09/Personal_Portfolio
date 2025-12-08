@@ -51,7 +51,7 @@ function CareerCard({
         </h1>
       </div>
       <div id="timeline">
-        <h3 className={`font-extrabold underline text-center ${use==='experience'?'text-base tablet:text-xl smLaptop:text-xl laptop:text-xl lgLaptop:text-[1.2vw] 4k:text-4xl':'text-base tablet:text-lg smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.1vw] 4k:text-3xl/normal text-text-muted'}`}>
+        <h3 className={`font-extrabold text-center ${use==='experience'?'text-base tablet:text-xl smLaptop:text-xl laptop:text-xl lgLaptop:text-[1.2vw] 4k:text-4xl':'text-base tablet:text-lg smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.1vw] 4k:text-3xl/normal text-text-muted'}`}>
           {date}
         </h3>
       </div>
