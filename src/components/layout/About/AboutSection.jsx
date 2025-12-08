@@ -286,7 +286,7 @@ function AboutSection() {
                   duration:3
                 }
               }}
-          className="text-center lg:text-left font-bold text-[5vh]/15 tablet:text-[4.5rem] smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[6rem] 4k:text-[13rem]/[12rem] mb-6"
+          className="text-center lg:text-left font-[1000] text-6xl tablet:text-[4.5rem] smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[6rem] 4k:text-[13rem]/[12rem] mb-6"
         >
           Frontend Developer & Proactive Learner
         </motion.h1>

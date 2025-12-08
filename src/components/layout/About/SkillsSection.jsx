@@ -25,7 +25,7 @@ function SkillsSection() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeInOut",
       },
     },
@@ -66,19 +66,19 @@ function SkillsSection() {
       whileInView={"visible"}
       viewport={{ once: false }}
       id="skillsSectionContainer"
-      className="w-full h-full text-text-light smLaptop:border-r-2 px-5 md:px-10 py-5 flex flex-col gap-8 smLaptop:gap-6 4k:gap-8 items-center smLaptop:items-start"
+      className="w-full h-full text-text-light smLaptop:border-r-2 px-5 md:px-10 py-5 flex flex-col gap-10 smLaptop:gap-6 4k:gap-8 items-center smLaptop:items-start"
     >
       <motion.h2
         variants={headingVariants}
         initial="initial"
         whileInView={"visible"}
-        className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden"
+        className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden font-limelight"
       >
         Skills
       </motion.h2>
       <div
         id="skillsContainer"
-        className="w-full flex flex-col gap-5 4k:gap-10"
+        className="w-full flex flex-col gap-5 4k:gap-10 bg-linear-[20deg,#0A2540_40%,#FFD54A_100%] p-10 rounded-2xl"
       >
         <div
           id="technicalSkills"

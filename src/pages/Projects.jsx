@@ -1,6 +1,7 @@
 import React from "react";
 import { Footer,ProjectCard } from "@/components";
 import {motion} from 'motion/react'
+import { duration } from "@mui/material";
 
 function Projects() {
 
@@ -61,6 +62,7 @@ function Projects() {
     visible: {
       opacity: 1,
       transition: {
+        duration:0.8,
         staggerChildren: 0,
       },
     },
@@ -75,7 +77,7 @@ function Projects() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeOut",
       },
     },
@@ -99,7 +101,7 @@ function Projects() {
         >
           <motion.h1
             variants={introChildVariants}
-            className="text-text-light text-xl smLaptop:text-3xl 4k:text-5xl font-extrabold"
+            className="text-text-light text-xl smLaptop:text-3xl 4k:text-5xl font-extrabold font-limelight"
           >
             My <span className="text-primary-golden">Works</span>
           </motion.h1>

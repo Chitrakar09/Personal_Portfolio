@@ -21,7 +21,7 @@ function Experience() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeInOut",
       },
     },
@@ -48,8 +48,8 @@ const headingVariants={
       viewport={{ once: false }}
       className="w-full text-white px-5 md:px-10 py-5 flex flex-col items-center smLaptop:items-start gap-8 smLaptop:gap-6 4k:gap-10"
     >
-      <motion.h1 variants={headingVariants} initial="initial" whileInView={"visible"} className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden">Timeline</motion.h1>
-      <div id="cardContainer" className="w-full flex flex-col gap-5">
+      <motion.h1 variants={headingVariants} initial="initial" whileInView={"visible"} className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden font-limelight">Timeline</motion.h1>
+      <div id="cardContainer" className="w-full flex flex-col gap-5 smLaptop:pt-7">
         {experiences.map((experience, i) => (
           <div key={i} className="w-full">
             <CareerCard

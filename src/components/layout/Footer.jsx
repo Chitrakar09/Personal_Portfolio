@@ -1,8 +1,13 @@
 import React from "react";
+import { CtaSection } from "..";
+import { useLocation } from "react-router";
 function Footer() {
   const dateObj= new Date();
   const year= dateObj.getFullYear();
+  const location=useLocation();
   return (
+    <div className="w-full flex flex-col">
+      {location.pathname==='/realm/about'&&<CtaSection/>}
     <div
       id="footer"
       className="w-full py-2 px-5 md:px-10 flex justify-between items-center bg-background-dark text-amber-50"
@@ -43,6 +48,7 @@ function Footer() {
         </span>
         </div>
       </div>
+    </div>
     </div>
   );
 }

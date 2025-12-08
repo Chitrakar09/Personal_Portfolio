@@ -69,13 +69,13 @@ function Contact() {
     <div id='container' className='w-full h-full flex flex-col justify-between'>
       <div id="content" className='w-full h-full py-10 px-12 flex flex-col justify-center gap-5 items-center'>
         <div id='heading'>
-          <h1 className='text-text-light font-extrabold text-3xl underline underline-offset-4'>Get in Touch</h1>
+          <h1 className='text-text-light font-extrabold text-3xl underline underline-offset-4 font-limelight'>Get in Touch</h1>
         </div>
         <motion.div variants={parentVariants} initial="initial" animate="visible" id="links" className='flex flex-col gap-5 justify-center items-start'>
           {links.map((link,i)=>(
             <motion.div variants={childVariants} id='linkContainer' key={i} className='flex justify-center items-center gap-1'>
               <FontAwesomeIcon icon={link.icon} className='text-primary-golden text-4xl'/>
-              <a href={link.link} target='_blank' className='text-text-light text-lg underline underline-offset-4'>{link.title}</a>
+              <a href={link.link} target='_blank' className='text-text-light text-lg font-extrabold underline underline-offset-4'>{link.title}</a>
             </motion.div>
           ))}
         </motion.div>

@@ -28,7 +28,7 @@ function Hobbies() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeIn",
       },
     },
@@ -41,7 +41,7 @@ function Hobbies() {
     visible: {
       opacity: 1,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeIn",
       },
     },
@@ -70,7 +70,7 @@ function Hobbies() {
         variants={headingVariants}
         initial="initial"
         whileInView={"visible"}
-        className="text-4xl 4k:text-8xl font-extrabold text-center"
+        className="text-4xl 4k:text-8xl font-extrabold text-center font-limelight"
       >
         <span className="text-primary-golden">Interests & Life</span> Outside
         Code

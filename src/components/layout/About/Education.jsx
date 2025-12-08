@@ -23,7 +23,7 @@ function Education() {
       opacity: 1,
       y:0,
       transition: {
-        duration: 1,
+        duration: 0.8,
         ease: "easeInOut",
       },
     },
@@ -39,7 +39,7 @@ function Education() {
           initial="initial"
           whileInView="visible"
           viewport={{ once: false }}
-          className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-center text-primary-golden smLaptop:text-start">Education</motion.h1>
+          className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-center text-primary-golden smLaptop:text-start font-limelight">Education</motion.h1>
           <div id="cardContainer" className=" flex flex-col gap-5">
             {educations.map((education, i) => (
               <div key={i} className="w-full">

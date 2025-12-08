@@ -43,8 +43,8 @@ function ProjectCard({ project, Key }) {
         {/* description */}
         <div className="text-text-muted text-sm tablet:text-lg smLaptop:text-base lgLaptop:text-lg 4k:text-3xl mb-4 4k:mb-8 flex flex-col justify-between gap-2 4k:gap-4 flex-grow">
           {project.intro}
-          {(isInViewMore && isDesktop) && project.description}
-          {(isDesktop)? isInViewMore ? (
+          {isInViewMore && project.description}
+          { isInViewMore ? (
             <button
               onClick={() => setIsViewMore(false)}
               className="text-text-light underline underline-offset-2 text-left hover:text-accent-amber"
@@ -58,7 +58,7 @@ function ProjectCard({ project, Key }) {
             >
               Read More
             </button>
-          ):null}
+          )}
         </div>
         {/* tech stack */}
         <div className="flex flex-wrap gap-2 4k:gap-5 text-sm 4k:text-3xl text-text-light mb-3 font-bold">

@@ -11,4 +11,5 @@ import SkillContainer from "./ui/SkillContainer";
 import FeaturedProject from "./layout/About/FeaturedProject";
 import Hobbies from "./layout/About/Hobbies";
 import BounceCards from "./ui/BounceCards";
-export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard, ProjectCard,SkillsSection,SkillContainer,FeaturedProject,Hobbies,BounceCards};
+import CtaSection from "./layout/About/CtaSection";
+export {ProfilePic,Button,Header,Footer,AboutSection,Career,CareerCard, ProjectCard,SkillsSection,SkillContainer,FeaturedProject,Hobbies,BounceCards,CtaSection};
