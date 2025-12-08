@@ -46,12 +46,12 @@ function CareerCard({
       className={`${use==='experience'?'px-5 smLaptop:px-8':null} lgLaptop:pb-5 ${border} flex flex-col gap-2 4k:gap-6 items-start`}
     >
       <div id="title">
-        <h1 className={`font-[1000] text-start ${use==='experience'?'smLaptop:text-start text-[6vw] tablet:text-[5vw] smLaptop:text-3xl laptop:text-3xl 4k:text-7xl':'text-[4vw] tablet:text-[2.5vw] smLaptop:text-[1.7vw] laptop:text-[1.5vw] 4k:text-5xl '} laptop:underline-offset-8 font-title underline underline-offset-3`}>
+        <h1 className={`font-[1000] text-start ${use==='experience'?'smLaptop:text-start text-[6vw] tablet:text-[5vw] smLaptop:text-3xl laptop:text-3xl 4k:text-7xl':'text-[4vw] tablet:text-[2.5vw] smLaptop:text-[1.7vw] laptop:text-[1.5vw] 4k:text-5xl/normal '} laptop:underline-offset-8 font-title underline underline-offset-3`}>
           {title}
         </h1>
       </div>
       <div id="timeline">
-        <h3 className={`font-extrabold underline text-center ${use==='experience'?'text-base tablet:text-xl smLaptop:text-xl laptop:text-xl lgLaptop:text-[1.2vw] 4k:text-4xl':'text-base tablet:text-lg smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.1vw] 4k:text-3xl text-text-muted'}`}>
+        <h3 className={`font-extrabold underline text-center ${use==='experience'?'text-base tablet:text-xl smLaptop:text-xl laptop:text-xl lgLaptop:text-[1.2vw] 4k:text-4xl':'text-base tablet:text-lg smLaptop:text-lg laptop:text-lg lgLaptop:text-[1.1vw] 4k:text-3xl/normal text-text-muted'}`}>
           {date}
         </h3>
       </div>
@@ -62,7 +62,7 @@ function CareerCard({
       >
         {(details&&isDesktop) && (
           <motion.ul
-          className="font-medium text-text-muted tablet:text-xl smLaptop:text-base laptop:text-base lgLaptop:text-[1.2vw] 4k:text-4xl flex flex-col gap-1">
+          className="font-medium text-text-muted tablet:text-xl smLaptop:text-base laptop:text-base lgLaptop:text-[1.2vw] 4k:text-4xl/normal flex flex-col gap-1">
             {details}
           </motion.ul>
         )}
