@@ -81,9 +81,9 @@ function LandingPage() {
         <motion.p
           variants={infoChildVariants}
           id="title"
-          className="font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light mt-1"
+          className="font-bold text-[16px] ls:text-lg md:text-sm lg:text-xl text-text-light mt-1 text-center"
         >
-          Web Developer | Performance Specialist
+          Frontend Developer
         </motion.p>
         <motion.div variants={infoChildVariants} id="button">
           <Link to="/realm/about">

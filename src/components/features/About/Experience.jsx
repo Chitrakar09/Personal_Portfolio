@@ -9,7 +9,7 @@ function Experience() {
       title: "OpenJournal: Full-Stack Web App",
       date: "2024-Present",
       details:
-        (<ul className="list-disc pl-5 space-y-1"><li>Engineered a dynamic user interface using React, implementing custom hooks and state management to ensure a performant and maintainable codebase.</li><li>Integrated the Appwrite BaaS (Backend-as-a-Service) for robust user authentication, data synchronization, and file storage, significantly reducing time spent on custom backend setup.</li><li>Developed a pixel-perfect, mobile-responsive layout across all major viewports using the utility-first approach of Tailwind CSS.</li></ul>),
+        (<ul className="list-disc pl-5 space-y-1"><li>Architected the entire user interface using React and the Context API for global state, developing 3+ custom hooks for reusable, decoupled logic</li><li>Leveraged Appwrite BaaS for all backend functions, implementing user authentication, real-time data synchronization, and secure file storage across the platform.</li><li>Developed a pixel-perfect, mobile-responsive layout across all major viewports using the utility-first approach of Tailwind CSS.</li></ul>),
     },
   ];
 
@@ -48,7 +48,7 @@ const headingVariants={
       viewport={{ once: false }}
       className="w-full text-white px-5 md:px-10 py-5 flex flex-col items-center smLaptop:items-start gap-8 smLaptop:gap-6 4k:gap-10"
     >
-      <motion.h1 variants={headingVariants} initial="initial" whileInView={"visible"} className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden">Experience</motion.h1>
+      <motion.h1 variants={headingVariants} initial="initial" whileInView={"visible"} className="underline underline-offset-4 text-4xl 4k:text-8xl font-extrabold text-primary-golden">Timeline</motion.h1>
       <div id="cardContainer" className="w-full flex flex-col gap-5">
         {experiences.map((experience, i) => (
           <div key={i} className="w-full">

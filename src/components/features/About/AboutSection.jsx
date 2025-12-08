@@ -288,7 +288,7 @@ function AboutSection() {
               }}
           className="text-center lg:text-left font-bold text-[5vh]/15 tablet:text-[4.5rem] smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[6rem] 4k:text-[13rem]/[12rem] mb-6"
         >
-          Frontend Developer & Performance Specialist
+          Frontend Developer & Proactive Learner
         </motion.h1>
 
         {/* Description */}

@@ -158,7 +158,7 @@ function Hobbies() {
             >
               When I draw or paint, I focus heavily on visual balance,
               composition, and color theory. This is where I train my eye for
-              the aesthetic detail that helps me build truly beautiful and
+              the aesthetic detail that helps me build highly functional, aesthetically polished and
               intuitive user interfaces.
             </motion.p>
           </div>
