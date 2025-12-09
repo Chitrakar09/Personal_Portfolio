@@ -78,7 +78,7 @@ function SkillsSection() {
       </motion.h2>
       <div
         id="skillsContainer"
-        className="w-full flex flex-col gap-5 4k:gap-10 bg-linear-[20deg,#0A2540_40%,#FFD54A_100%] p-10 rounded-2xl"
+        className="w-full flex flex-col gap-5 4k:gap-10 border-4 border-white shadow-2xl shadow-accent-amber p-10 rounded-2xl"
       >
         <div
           id="technicalSkills"
