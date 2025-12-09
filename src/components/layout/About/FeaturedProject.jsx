@@ -66,7 +66,7 @@ const projectVariants={
       variants={headingVariants}
       initial="initial"
       whileInView={"visible"}
-      className="text-4xl 4k:text-8xl font-extrabold text-text-light font-limelight">
+      className="text-4xl 4k:text-8xl font-extrabold text-center text-text-light font-limelight">
         Featured <span className="text-primary-golden">Projects</span>
       </motion.h1>
       <div

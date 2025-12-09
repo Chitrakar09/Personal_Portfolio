@@ -107,7 +107,7 @@ function Hobbies() {
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="font-bold text-3xl 4k:text-7xl"
+              className="font-bold text-3xl 4k:text-7xl text-center"
             >
               ♟
               <span className="ml-3 underline underline-offset-7">
@@ -143,7 +143,7 @@ function Hobbies() {
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="font-bold text-3xl 4k:text-7xl"
+              className="font-bold text-center text-3xl 4k:text-7xl"
             >
               🎨
               <span className="ml-3 underline underline-offset-7">
@@ -218,7 +218,7 @@ function Hobbies() {
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="font-bold text-3xl 4k:text-7xl"
+              className="font-bold text-center text-3xl 4k:text-7xl"
             >
               📸
               <span className="ml-3 underline underline-offset-7">
