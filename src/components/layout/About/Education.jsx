@@ -4,12 +4,12 @@ import { motion } from "motion/react";
 function Education() {
     const educations = [
     {
-      title: "Bachelors of Science in Computer Science and Information Technology (Bsc.CSIT)- Patan Multiple Campus, Nepal",
-      date: "2024-Present",
+      title: "Bsc in Computer Science and Information Technology (Bsc.CSIT)",
+      date: "2024-Present | Patan Multiple Campus",
     },
     {
-      title: "Higher Secondary Education - Grand Academy, Nepal",
-      date: "2022-2024",
+      title: "Higher Secondary Education",
+      date: "2022-2024 | Grand Academy",
     },
   ];
 
