@@ -137,7 +137,7 @@ function AboutSection() {
     // Main container
     <motion.div
       id="AboutContainer"
-      className="w-full h-full mt-15 smLaptop:mt-0 px-5 md:px-10 pt-[5vh] smLaptop:pt-[10vh] pb-[5vh] tablet:pb-[5vh] smLaptop:pb-[10vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-black flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-start gap-15 lg:gap-10 xl:gap-0"
+      className="w-full h-full mt-10 smLaptop:mt-0 px-5 md:px-10 pt-[5vh] smLaptop:pt-[10vh] pb-[5vh] tablet:pb-[5vh] smLaptop:pb-[10vh] laptop:pb-[10vh] lgLaptop:pb-[10vh]  bg-black flex flex-col lg:flex-row justify-start lg:justify-center items-start lg:items-start gap-15 lg:gap-10 xl:gap-0"
     >
       {/* profile container */}
       <div
