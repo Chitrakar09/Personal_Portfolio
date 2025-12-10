@@ -85,7 +85,7 @@ function Hobbies() {
           initial="initial"
           whileInView={"visible"}
           id="strategist"
-          className="w-full flex flex-col smLaptop:flex-row gap-10 justify-center bg-background-dark p-15 rounded-2xl"
+          className="w-full flex flex-col smLaptop:flex-row gap-10 justify-center bg-background-dark px-5 tablet:px-10 py-15 rounded-2xl"
         >
           <motion.div
             variants={imageVariants}
@@ -101,13 +101,13 @@ function Hobbies() {
           </motion.div>
           <div
             id="contentContainer"
-            className="w-full smLaptop:w-1/2 flex flex-col justify-start items-center smLaptop:items-start gap-4 4k:gap-7"
+            className="w-full smLaptop:w-1/2 flex flex-col justify-start items-center smLaptop:items-start gap-4 tablet:gap-7 smLaptop:gap-4 4k:gap-7"
           >
             <motion.h3
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="font-bold text-3xl 4k:text-7xl text-center"
+              className="font-bold text-3xl tablet:text-5xl smLaptop:text-3xl 4k:text-7xl text-center"
             >
               ♟
               <span className="ml-3 underline underline-offset-7">
@@ -118,7 +118,7 @@ function Hobbies() {
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="text-lg tablet:text-xl 4k:text-4xl text-text-muted text-left"
+              className="text-lg tablet:text-3xl smLaptop:text-xl 4k:text-4xl text-text-muted text-left"
             >
               I love diving deep into a game of Chess. It's my favorite way to
               practice looking multiple steps ahead, anticipating consequences,
@@ -133,17 +133,17 @@ function Hobbies() {
           initial="initial"
           whileInView={"visible"}
           id="visual composer"
-          className="w-full flex flex-col smLaptop:flex-row gap-10 justify-center p-15 rounded-2xl"
+          className="w-full flex flex-col smLaptop:flex-row gap-10 justify-center px-5 tablet:px-10 py-15 rounded-2xl"
         >
           <div
             id="contentContainer"
-            className="w-full smLaptop:w-1/2 flex flex-col justify-start items-center smLaptop:items-start gap-4 4k:gap-7 order-2 smLaptop:-order-1"
+            className="w-full smLaptop:w-1/2 flex flex-col justify-start items-center smLaptop:items-start gap-4 tablet:gap-7 smLaptop:gap-4 4k:gap-7 order-2 smLaptop:-order-1"
           >
             <motion.h3
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="font-bold text-center text-3xl 4k:text-7xl"
+              className="font-bold text-center text-3xl tablet:text-5xl smLaptop:text-3xl 4k:text-7xl"
             >
               🎨
               <span className="ml-3 underline underline-offset-7">
@@ -154,7 +154,7 @@ function Hobbies() {
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="text-lg tablet:text-xl 4k:text-4xl text-text-muted text-left"
+              className="text-lg tablet:text-3xl smLaptop:text-xl 4k:text-4xl text-text-muted text-left"
             >
               When I draw or paint, I focus heavily on visual balance,
               composition, and color theory. This is where I train my eye for
@@ -181,7 +181,7 @@ function Hobbies() {
           initial="initial"
           whileInView={"visible"}
           id="imageCrafter"
-          className="w-full flex flex-col smLaptop:flex-row gap-10 justify-center p-15 smLaptop:px-5 laptop:p-15 rounded-2xl bg-background-dark"
+          className="w-full flex flex-col smLaptop:flex-row gap-10 justify-center px-5 tablet:px-10 py-15 smLaptop:px-5 laptop:p-15 rounded-2xl bg-background-dark"
         >
           <motion.div
             variants={imageVariants}
@@ -212,13 +212,13 @@ function Hobbies() {
           </motion.div>
           <div
             id="contentContainer"
-            className="w-full smLaptop:w-3/5 flex flex-col justify-start items-center smLaptop:items-start gap-4 4k:gap-7"
+            className="w-full smLaptop:w-3/5 flex flex-col justify-start items-center smLaptop:items-start gap-4 tablet:gap-7 smLaptop:gap-4 4k:gap-7"
           >
             <motion.h3
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="font-bold text-center text-3xl 4k:text-7xl"
+              className="font-bold text-center text-3xl tablet:text-5xl smLaptop:text-3xl 4k:text-7xl"
             >
               📸
               <span className="ml-3 underline underline-offset-7">
@@ -229,7 +229,7 @@ function Hobbies() {
               variants={headingVariants}
               initial="initial"
               whileInView={"visible"}
-              className="text-lg tablet:text-xl 4k:text-4xl text-text-muted text-left"
+              className="text-lg tablet:text-3xl smLaptop:text-xl 4k:text-4xl text-text-muted text-left"
             >
               As a Photographer, I value the technical process and precision
               needed to realize a vision. This drive for meticulously crafted

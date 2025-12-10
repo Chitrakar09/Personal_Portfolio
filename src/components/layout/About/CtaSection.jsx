@@ -24,7 +24,7 @@ function CtaSection() {
         <h1 className="font-heading font-extrabold font-lobster text-white text-2xl tablet:text-5xl 4k:text-8xl">
           Let's Transform Ideas into Code
         </h1>
-        <p className="text-text-muted font-bold text-sm tablet:text-lg smLaptop:text-[1.19rem] 4k:text-4xl">Whether you have a complex UI challenge, a startup idea, or an opening for an ambitious developer, I am ready to commit 100%.</p>
+        <p className="text-text-muted font-bold text-sm tablet:text-[1.3rem] smLaptop:text-[1.19rem] 4k:text-4xl">Whether you have a complex UI challenge, a startup idea, or an opening for an ambitious developer, I am ready to commit 100%.</p>
         <a href='mailto:chitrakarpratyush@gmail.com' target="_blank" className="mt-0.5">
         <Button
             text="Send an Email"

@@ -21,7 +21,8 @@
   --color-accent-amber: #ff8a00; /* Alerts, warnings, special attention */
 
   /* breakpoints */
-  --breakpoint-mobile:40rem;
+  --breakpoint-mdMobile:21rem;
+  --breakpoint-lgMobile:24rem;
   --breakpoint-tablet:48rem;
   --breakpoint-smLaptop:64rem;
   --breakpoint-laptop:80rem;
