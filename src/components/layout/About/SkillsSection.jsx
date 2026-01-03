@@ -6,7 +6,7 @@ function SkillsSection() {
   const skills = {
     technical: {
       frameworks: ["React.js", "Javascript(ES6+)", "HTML5", "CSS3"],
-      services: ["Appwrite (BaaS)"],
+      services: ["Appwrite (BaaS)","Axios"],
       design: ["Tailwind CSS", "Figma", "Responsive Design"],
       workflow: ["Git", "Github", "npm", "VS Code"],
     },

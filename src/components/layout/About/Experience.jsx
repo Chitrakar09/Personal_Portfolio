@@ -9,7 +9,7 @@ function Experience() {
       title: "OpenJournal: Full-Stack Web App",
       date: "2024-Present",
       details:
-        (<ul className="list-disc pl-5 space-y-1"><li>Architected the entire user interface using React and the Context API for global state, developing 3+ custom hooks for reusable, decoupled logic</li><li>Leveraged Appwrite BaaS for all backend functions, implementing user authentication, real-time data synchronization, and secure file storage across the platform.</li><li>Developed a pixel-perfect, mobile-responsive layout across all major viewports using the utility-first approach of Tailwind CSS.</li></ul>),
+        (<ul className="list-disc pl-5 space-y-1"><li>Engineered a scalable Full-Stack architecture by integrating React.js with Appwrite (BaaS), implementing robust user authentication, real-time database synchronization, and automated storage management for a seamless user experience.</li><li>Optimized application state and logic using Redux Toolkit and custom React hooks, reducing component coupling and ensuring efficient data flow across protected routes and complex CRUD operations.</li><li>Developed a pixel-perfect, mobile-responsive layout across all major viewports using the utility-first approach of Tailwind CSS.</li></ul>),
     },
   ];
 

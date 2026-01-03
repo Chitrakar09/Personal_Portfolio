@@ -60,7 +60,7 @@ function CareerCard({
         id="about"
         className="w-full flex flex-col"
       >
-        {(details&&isDesktop) && (
+        {details && (
           <motion.ul
           className="font-medium text-text-muted tablet:text-xl smLaptop:text-base laptop:text-base lgLaptop:text-[1.2vw] 4k:text-4xl/normal flex flex-col gap-1">
             {details}
