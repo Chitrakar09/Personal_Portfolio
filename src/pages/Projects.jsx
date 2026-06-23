@@ -1,10 +1,8 @@
 import React from "react";
-import { Footer,ProjectCard } from "@/components";
-import {motion} from 'motion/react'
-import { duration } from "@mui/material";
+import { Footer, ProjectCard } from "@/components";
+import { motion } from "motion/react";
 
 function Projects() {
-
   //projects data
 
   const projects = [
@@ -29,29 +27,118 @@ function Projects() {
           </p>
         </>
       ),
-      description:(
+      description: (
         <>
-            <ul className="list-disc pl-4 space-y-1">
-              <li>
-                React Component-Based UI engineered for rapid rendering and
-                optimal performance.
-              </li>
-              <li>
-                Integrated Appwrite BaaS for secure real-time data persistence
-                and user authentication.
-              </li>
-              <li>
-                Tailwind CSS mobile-first design focused on minimal footprint
-                and optimal load speed.
-              </li>
-              <li>Managed end-to-end development and Netlify deployment.</li>
-            </ul>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>
+              React Component-Based UI engineered for rapid rendering and
+              optimal performance.
+            </li>
+            <li>
+              Integrated Appwrite BaaS for secure real-time data persistence and
+              user authentication.
+            </li>
+            <li>
+              Tailwind CSS mobile-first design focused on minimal footprint and
+              optimal load speed.
+            </li>
+            <li>Managed end-to-end development and Netlify deployment.</li>
+          </ul>
         </>
       ),
       github: "https://github.com/Chitrakar09/OpenJournal-Blog-Project",
       url: "https://openjournal.netlify.app/home",
     },
-   
+    {
+      imgSrc: "/projects/youtube_backend.png",
+      techs: [
+        "Express.js",
+        "Node.js",
+        "MongoDB",
+        "Mongoose",
+        "JSON Web Token",
+        "Multer+Cloudinary",
+        "nodemon",
+      ],
+      title: "Youtube Backend Clone",
+      intro: (
+        <>
+          <p>
+            A professional backend service for a learning-focused MERN
+            video-sharing application. VideoTube is designed to handle user
+            accounts, video upload and management, reactions, comments,
+            subscriptions, playlists, and channel analytics.
+          </p>
+        </>
+      ),
+      description: (
+        <>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>
+              JWT authentication with secure user, session, and profile
+              management.
+            </li>
+            <li>
+              Video upload, storage (Cloudinary), publishing, and full CRUD
+              functionality.
+            </li>
+            <li>
+              Interactive social features: comments, likes, subscriptions,
+              playlists, and media posts.
+            </li>
+            <li>
+              Creator dashboard with analytics, channel insights, and content
+              management.
+            </li>
+            <li>
+              Production-ready REST API with health monitoring and scalable
+              architecture.
+            </li>
+          </ul>
+        </>
+      ),
+      github:"https://github.com/Chitrakar09/Youtube-Clone"
+    },
+    {
+      imgSrc: "/projects/student_registration_backend.png",
+      techs: [
+        "Express.js",
+        "Node.js",
+        "PostgreSql",
+        "pg",
+        "nodemon",
+      ],
+      title: "Student Registration System Backend",
+      intro: (
+        <>
+          <p>
+           An enterprise-grade backend system for streamlined student registration and academic management. Designed for registrars, administrators, and developers, this robust API manages end-to-end institutional workflows—from student profiling and department administration to course scheduling, instructor assignments, and real-time enrollment analytics.
+          </p>
+        </>
+      ),
+      description: (
+        <>
+          <ul className="list-disc pl-4 space-y-1">
+            <li>
+              Comprehensive Student Management System with CRUD operations for students, instructors, departments, and courses.
+            </li>
+            <li>
+              Enrollment and academic workflow management with status tracking and instructor-course assignments.
+            </li>
+            <li>
+              Analytics and reporting for course popularity, departmental metrics, and enrollment trends.
+            </li>
+            <li>
+              Flexible data retrieval with filtering, sorting, pagination, and relational queries.
+            </li>
+            <li>
+              Scalable Express.js REST API powered by PostgreSQL, validation, and robust error handling.
+            </li>
+          </ul>
+        </>
+      ),
+      github:"https://github.com/Chitrakar09/Student_Registration_System"
+    },
   ];
 
   //Animation
@@ -62,7 +149,7 @@ function Projects() {
     visible: {
       opacity: 1,
       transition: {
-        duration:0.8,
+        duration: 0.8,
         staggerChildren: 0,
       },
     },
@@ -82,7 +169,7 @@ function Projects() {
       },
     },
   };
-  
+
   return (
     <div
       id="pageContainer"
@@ -123,15 +210,14 @@ function Projects() {
             className="flex flex-col justify-center items-start gap-8"
           >
             {projects.map((project, i) => (
-              <ProjectCard project={project} key={i}/>
+              <ProjectCard project={project} key={i} />
             ))}
           </motion.div>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 }
 
 export default Projects;
-

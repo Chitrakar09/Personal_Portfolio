@@ -80,14 +80,14 @@ function ProjectCard({ project, Key }) {
           >
             <FontAwesomeIcon icon={faGithub} /> Github
           </a>
-          <a
+          {project.url&&(<a
             href={project.url}
             target="_blank"
             className="mt-auto hover:text-primary-golden hover:-translate-y-1 transition-all duration-300"
           >
             {" "}
             <FontAwesomeIcon icon={faUpRightFromSquare} /> Live
-          </a>
+          </a>)}
         </div>
       </div>
     </motion.div>

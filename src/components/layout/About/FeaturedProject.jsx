@@ -11,7 +11,7 @@ import { delay } from "motion";
 function FeaturedProject() {
   const isDesktop = useMediaQuery("(min-width:1024px)");
   const navigate = useNavigate();
-  const featuredProject = isDesktop
+  const featuredProject = isDesktop // for mobile have 3 featured projects but for mobile only one
     ? [
         {
           imgSrc: "/projects/OpenJournal.png",
@@ -19,13 +19,22 @@ function FeaturedProject() {
           github: "https://github.com/Chitrakar09/OpenJournal-Blog-Project",
           url: "https://openjournal.netlify.app/home",
         },
+        {
+          imgSrc:"/projects/youtube_backend.png",
+          title:"Youtube Backend Clone",
+          github:"https://github.com/Chitrakar09/Youtube-Clone"
+        },
+        {
+          imgSrc:"/projects/student_registration_backend.png",
+          title: "Student Registration System Backend",
+          github:"https://github.com/Chitrakar09/Student_Registration_System"
+        }
       ]
     : [
         {
-          imgSrc: "/projects/OpenJournal.png",
-          title: "OpenJournal: Full-Stack SPA",
-          github: "https://github.com/Chitrakar09/OpenJournal-Blog-Project",
-          url: "https://openjournal.netlify.app/home",
+          imgSrc:"/projects/youtube_backend.png",
+          title:"Youtube Backend Clone",
+          github:"https://github.com/Chitrakar09/Youtube-Clone"
         },
       ];
 
@@ -94,14 +103,14 @@ const projectVariants={
                 >
                   <FontAwesomeIcon icon={faGithub} /> Github
                 </a>
-                <a
+               {project.url&&( <a
                   href={project.url}
                   target="_blank"
                   className="hover:text-primary-golden hover:-translate-y-1 transition-all duration-300"
                 >
                   {" "}
                   <FontAwesomeIcon icon={faUpRightFromSquare} /> Live
-                </a>
+                </a>)}
               </div>
               <Button
                 text="View Details"

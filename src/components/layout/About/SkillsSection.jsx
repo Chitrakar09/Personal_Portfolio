@@ -5,8 +5,8 @@ import { motion } from "motion/react";
 function SkillsSection() {
   const skills = {
     technical: {
-      frameworks: ["React.js", "Javascript(ES6+)", "HTML5", "CSS3"],
-      services: ["Appwrite (BaaS)","Axios"],
+      frameworks: ["React.js", "Javascript(ES6+)", "HTML5", "CSS3","Node.js","Express.js","Mongoose","Prisma","Python"],
+      services: ["PostgreSQL","MongoDb","Appwrite","SupaBase","Axios"],
       design: ["Tailwind CSS", "Figma", "Responsive Design"],
       workflow: ["Git", "Github", "npm", "VS Code"],
     },

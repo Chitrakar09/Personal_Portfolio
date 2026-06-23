@@ -288,7 +288,7 @@ function AboutSection() {
               }}
           className="text-center lg:text-left font-[1000] text-6xl tablet:text-[4.5rem] smLaptop:text-[7.5dvw]/20 laptop:text-[6dvw]/20 lgLaptop:text-[6rem] 4k:text-[13rem]/[12rem] mb-6"
         >
-          Frontend Developer & Proactive Learner
+          FullStack Developer & Proactive Learner
         </motion.h1>
 
         {/* Description */}
@@ -298,9 +298,7 @@ function AboutSection() {
           className="flex flex-col gap-2 4k:mb-3"
         >
           <p className="text-text-muted text-center text-[3.5dvw] tablet:text-[2.3dvw] smLaptop:text-[1.6dvw] laptop:text-[1.3dvw] lgLaptop:text-[1.25dvw] 4k:text-[1.3dvw] lg:text-left">
-            I translate complex design specifications into high-performance user
-            experiences. I specialize in building pixel-perfect, accessible
-            interfaces using React and Tailwind.
+            I translate complex design specifications into high-performance full-stack applications. I specialize in building pixel-perfect, accessible, and scalable user experiences from database to interface.
           </p>
         </motion.div>
         {/* buttons */}
